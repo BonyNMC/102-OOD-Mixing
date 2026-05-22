@@ -1,0 +1,200 @@
+Timestamp,Ngày,Ca,Panel,Máy,Trạng thái,Chi tiết,Người chịu trách nhiệm
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,manh_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,manh_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Changeover,M02,✅ Đã thực hiện,CP_09 → K2+ | TRANG → HONG,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Changeover,M03,✅ Đã thực hiện,TW_23 → TW_23 | CAM → LA,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Changeover,M03,✅ Đã thực hiện,TW_23 → TWGC_25 | LA → HONG,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Changeover,M03,✅ Đã thực hiện,TWFH_25 → TW_23 | HONG → DUONG,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Changeover,M03,❌ Thiếu,TWFH_25 → TWGC_25 | DUONG → TIM,bin_nguyen_van@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TWFH_25 / 1386NM0501,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Error,M05,Chưa khắc phục,Vật tư 2 — Sai Batch (Chuẩn: 6084VN1110) | TWFH_25 / 1386NM0501,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TW_23 / 1386NM0502,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Error,M05,Chưa khắc phục,Vật tư 2 — Sai Batch (Chuẩn: 6084VN1110) | TW_23 / 1386NM0502,cuong_nguyen_quoc@colpal.com
+2026-05-18 13:40:18,2026-05-18,Ca 1,Error,M03,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 5343VN1101) | TWGC_25 / 1386NM0308,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,dang_tran_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,K5+ → ZZ_25 | TIM → LA,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → ZZ_25 | LA → DUONG,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → ZZ_25 | DUONG → DO,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → ZZCC_25 | DO → DEN,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZCC_25 → PC_22 | DEN → TRANG,bin_nguyen_van@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,❌ Thiếu,DA_22 → CC_21 | TRANG → TIM,tan_huynh_cong@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M02,✅ Đã thực hiện,CC_21 → CC_21 | TIM → LA,tan_huynh_cong@colpal.com
+2026-05-18 21:39:53,2026-05-18,Ca 2,Changeover,M03,❌ Thiếu,TWGC_25 → TWFH_25 | TIM → HONG,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,✅ Đã thực hiện,DACC_20 → CP_09 | N/A → TRANG,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,✅ Đã thực hiện,CP_09 → K5+ | TRANG → TIM,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,❌ Thiếu,K5+ → CC_21 | TIM → DO,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,❌ Thiếu,CC_21 → CC_21 | DO → DUONG,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,❌ Thiếu,CC_21 → PRO_22CH | DUONG → DEN,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,❌ Thiếu,PRO_22CH → ZZCC_25 | DEN → DEN,tan_huynh_cong@colpal.com
+2026-05-19 05:39:50,2026-05-18,Ca 3,Changeover,M02,❌ Thiếu,ZZCC_25 → ZZ_25 | DEN → DO,tan_huynh_cong@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,manh_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,bon_van_tien@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Changeover,M02,✅ Đã thực hiện,ZZ_25 → K5+ | DO → TIM,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Changeover,M03,✅ Đã thực hiện,TWFH_25 → TWFH_25 | HONG → LA,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TW_23 / 1396NM0501,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TWFH_25 / 1396NM0502,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TWFH_25 / 1396NM0503,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Sai Batch (Chuẩn: 6073VN1101) | TW_23 / 1396NM0504,cuong_nguyen_quoc@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M06,Chưa khắc phục,Vật tư 1 — Sai thông số | CCDC_11 / 1396NM0601,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M06,Chưa khắc phục,Vật tư 2 — Sai thông số | CCDC_11 / 1396NM0601,bin_nguyen_van@colpal.com
+2026-05-19 13:40:13,2026-05-19,Ca 1,Error,M06,Chưa khắc phục,Màu (Color) — Sai thông số | CCDC_11 / 1396NM0601,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,dang_tran_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,K5+ → ZZ_25 | TIM → DO,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → ZZ_25 | DO → TIM,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → PC_22 | TIM → TRANG,bin_nguyen_van@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,PC_22 → CC_21 | TRANG → TIM,vu_nguyen_minh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,CC_21 → CC_21 | TIM → DUONG,vu_nguyen_minh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,CC_21 → CC_21 | DUONG → LA,vu_nguyen_minh@colpal.com
+2026-05-19 21:40:32,2026-05-19,Ca 2,Changeover,M02,✅ Đã thực hiện,CC_21 → CC_21 | LA → DO,vu_nguyen_minh@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,tien_trung_tien@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,nhieu_nguyen_van@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Changeover,M02,❌ Thiếu,DACC_20 → DACC_20 | N/A → HONG,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Changeover,M02,❌ Thiếu,DACC_20 → DACC_20 | HONG → LA,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Changeover,M02,❌ Thiếu,DACC_20 → DACC_20 | LA → DUONG,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Changeover,M02,❌ Thiếu,DACC_20 → ZZ_25 | DUONG → TIM,tan_huynh_cong@colpal.com
+2026-05-20 05:40:14,2026-05-19,Ca 3,Changeover,M02,❌ Thiếu,ZZ_25 → DACC_20 | TIM → N/A,tan_huynh_cong@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,minh_van_minh@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,manh_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,bon_van_tien@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Changeover,M03,✅ Đã thực hiện,TW_23 → TWGC_25 | LA → TIM,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Changeover,M03,✅ Đã thực hiện,TWGC_25 → TWGC_25 | TIM → HONG,bin_nguyen_van@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Chưa làm thông số (Chuẩn: 6073VN1101) | TWFH_25 / 1406NM0502,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Chưa làm thông số (Chuẩn: 6073VN1101) | TWFH_25 / 1406NM0503,cuong_nguyen_quoc@colpal.com
+2026-05-20 13:39:42,2026-05-20,Ca 1,Error,M05,Chưa khắc phục,Vật tư 1 — Chưa làm thông số (Chuẩn: 6073VN1101) | TW_23 / 1406NM0504,cuong_nguyen_quoc@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M07,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M02,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M03,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M05,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M06,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,N01,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,N02,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,N03,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,N04,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,NC,Hoàn thành,Duyệt: Đã duyệt,khanh_thanh_khanh@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,CDC1,Hoàn thành,Duyệt: Đã duyệt,dang_tran_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,CDC2,Hoàn thành,Duyệt: Đã duyệt,cuong_nguyen_quoc@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,TAWI_AB1,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,TAWI_AB2,Hoàn thành,Duyệt: Đã duyệt,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,TAWI_AB3,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,TAWI_AB4,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,XNJB,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Checklist,M08,Hoàn thành,Duyệt: Đã duyệt,vinh_hoang_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Changeover,M02,✅ Đã thực hiện,DACC_20 → ZZ_25 | N/A → TIM,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Changeover,M02,✅ Đã thực hiện,ZZ_25 → PC_22 | TIM → TRANG,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Changeover,M02,✅ Đã thực hiện,DA_22 → CC_21 | TRANG → DO,bin_nguyen_van@colpal.com
+2026-05-20 21:39:43,2026-05-20,Ca 2,Changeover,M02,✅ Đã thực hiện,CC_21 → CC_21 | DO → DUONG,bin_nguyen_van@colpal.com

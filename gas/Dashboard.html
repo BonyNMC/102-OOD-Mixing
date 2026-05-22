@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Control Room Dashboard - Real-time monitoring for Mixing area">
+<title>Control Room - MIXING</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-primary:#0a0e1a;--bg-card:#111827;--bg-card-hover:#1a2235;
+  --border:#1e293b;--border-accent:#334155;
+  --text-primary:#f1f5f9;--text-secondary:#94a3b8;--text-muted:#64748b;
+  --accent-green:#10b981;--accent-green-bg:rgba(16,185,129,.12);
+  --accent-yellow:#f59e0b;--accent-yellow-bg:rgba(245,158,11,.12);
+  --accent-red:#ef4444;--accent-red-bg:rgba(239,68,68,.12);
+  --accent-blue:#3b82f6;--accent-blue-bg:rgba(59,130,246,.12);
+  --accent-purple:#8b5cf6;
+  --radius:12px;--radius-sm:8px;
+  --shadow:0 4px 24px rgba(0,0,0,.4);
+}
+html{font-size:14px}
+body{font-family:'Inter',sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh;line-height:1.5}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.header-left{display:flex;align-items:center;gap:14px}
+.header-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.header h1{font-size:1.35rem;font-weight:800;letter-spacing:-.3px}
+.header h1 span{color:var(--accent-blue);font-weight:600}
+.header-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.badge{padding:5px 12px;border-radius:20px;font-size:.75rem;font-weight:600;display:flex;align-items:center;gap:6px}
+.badge-shift{background:var(--accent-blue-bg);color:var(--accent-blue);border:1px solid rgba(59,130,246,.3)}
+.badge-live{background:var(--accent-green-bg);color:var(--accent-green);border:1px solid rgba(16,185,129,.3);animation:pulse-badge 2s infinite}
+@keyframes pulse-badge{0%,100%{opacity:1}50%{opacity:.6}}
+.badge-live::before{content:'';width:7px;height:7px;background:var(--accent-green);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.meta-text{font-size:.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
+
+/* CONTROLS */
+.controls{padding:12px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)}
+.controls select,.controls input{background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:7px 12px;border-radius:var(--radius-sm);font-family:inherit;font-size:.8rem;outline:none}
+.controls select:focus,.controls input:focus{border-color:var(--accent-blue)}
+.controls input[type="date"]{cursor:pointer}
+.controls button{background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));color:#fff;border:none;padding:7px 18px;border-radius:var(--radius-sm);font-weight:600;cursor:pointer;font-size:.8rem;transition:opacity .2s}
+.controls button:hover{opacity:.85}
+.controls label{font-size:.75rem;color:var(--text-muted);font-weight:500}
+
+/* SUMMARY CARDS */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding:20px 24px}
+.summary-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;text-align:center;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);position:relative;overflow:hidden}
+.summary-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--border);transition:background-color .3s}
+.summary-card:hover{transform:translateY(-3px);border-color:var(--border-accent)}
+.summary-card .num{font-size:2rem;font-weight:800;line-height:1}
+.summary-card .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-top:8px;font-weight:600;line-height:1.4}
+
+.card-blue{border-color:rgba(59,130,246,.2);background:linear-gradient(180deg,rgba(59,130,246,.03) 0%,var(--bg-card) 100%)}
+.card-blue::before{background:var(--accent-blue)}
+.card-blue .num{color:var(--accent-blue)}
+.card-blue:hover{border-color:rgba(59,130,246,.5);box-shadow:0 6px 20px rgba(59,130,246,.12)}
+
+.card-green{border-color:rgba(16,185,129,.2);background:linear-gradient(180deg,rgba(16,185,129,.03) 0%,var(--bg-card) 100%)}
+.card-green::before{background:var(--accent-green)}
+.card-green .num{color:var(--accent-green)}
+.card-green:hover{border-color:rgba(16,185,129,.5);box-shadow:0 6px 20px rgba(16,185,129,.12)}
+
+.card-yellow{border-color:rgba(245,158,11,.2);background:linear-gradient(180deg,rgba(245,158,11,.03) 0%,var(--bg-card) 100%)}
+.card-yellow::before{background:var(--accent-yellow)}
+.card-yellow .num{color:var(--accent-yellow)}
+.card-yellow:hover{border-color:rgba(245,158,11,.5);box-shadow:0 6px 20px rgba(245,158,11,.12)}
+
+.card-red{border-color:rgba(239,68,68,.2);background:linear-gradient(180deg,rgba(239,68,68,.03) 0%,var(--bg-card) 100%)}
+.card-red::before{background:var(--accent-red)}
+.card-red .num{color:var(--accent-red)}
+.card-red:hover{border-color:rgba(239,68,68,.5);box-shadow:0 6px 20px rgba(239,68,68,.12)}
+
+.card-purple{border-color:rgba(139,92,246,.2);background:linear-gradient(180deg,rgba(139,92,246,.03) 0%,var(--bg-card) 100%)}
+.card-purple::before{background:var(--accent-purple)}
+.card-purple .num{color:var(--accent-purple)}
+.card-purple:hover{border-color:rgba(139,92,246,.5);box-shadow:0 6px 20px rgba(139,92,246,.12)}
+
+/* PANELS */
+.panels{padding:0 24px 24px;display:flex;flex-direction:column;gap:20px}
+.panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.panel-header{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(255,255,255,.02)}
+.panel-title{font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.panel-badge{font-size:.7rem;padding:3px 8px;border-radius:12px;font-weight:600}
+.panel-body{overflow-x:auto}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th{background:rgba(255,255,255,.04);color:var(--text-muted);font-weight:600;text-transform:uppercase;font-size:.68rem;letter-spacing:.6px;padding:10px 14px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--border);position:sticky;top:0}
+td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);white-space:nowrap;max-width:220px;overflow:hidden;text-overflow:ellipsis}
+tr:hover td{background:rgba(255,255,255,.03)}
+
+/* STATUS BADGES */
+.st{padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.st-done{background:var(--accent-green-bg);color:var(--accent-green)}
+.st-progress{background:var(--accent-yellow-bg);color:var(--accent-yellow)}
+.st-miss{background:var(--accent-red-bg);color:var(--accent-red);animation:pulse-miss 2.5s infinite}
+@keyframes pulse-miss{0%,100%{opacity:1}50%{opacity:.65}}
+.st-wait{background:var(--accent-blue-bg);color:var(--accent-blue)}
+
+/* ALERTS BOX */
+.alerts-box{margin:0 24px 16px;padding:14px 18px;border-radius:var(--radius);border:1px solid rgba(239,68,68,.25);background:rgba(239,68,68,.06);display:none}
+.alerts-box.show{display:block}
+.alerts-box h3{font-size:.85rem;color:var(--accent-red);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.alerts-box ul{list-style:none;font-size:.78rem;color:var(--text-secondary)}
+.alerts-box li{padding:3px 0;display:flex;align-items:center;gap:6px}
+.alerts-box li::before{content:'⚠';font-size:.7rem}
+
+/* EMPTY STATE */
+.empty{padding:40px;text-align:center;color:var(--text-muted);font-size:.85rem}
+
+/* LOADING */
+.loading{display:flex;align-items:center;justify-content:center;padding:60px;gap:10px;color:var(--text-muted)}
+.spinner{width:20px;height:20px;border:3px solid var(--border);border-top-color:var(--accent-blue);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header{padding:12px 16px}
+  .header h1{font-size:1.1rem}
+  .summary-grid{grid-template-columns:repeat(2,1fr);padding:14px 16px;gap:10px}
+  .panels{padding:0 16px 16px}
+  .controls{padding:10px 16px}
+  td,th{padding:8px 10px;font-size:.72rem}
+}
+@media(max-width:480px){
+  .summary-grid{grid-template-columns:repeat(2,1fr)}
+  .summary-card .num{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-left">
+    <div class="header-icon">🏭</div>
+    <h1>CONTROL ROOM — <span id="areaName">MIXING</span></h1>
+  </div>
+  <div class="header-right">
+    <div class="badge badge-shift" id="badgeShift">⏰ --</div>
+    <div class="badge badge-live" id="badgeLive">LIVE</div>
+    <div class="meta-text" id="metaTime">Last update: --</div>
+  </div>
+</header>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <label>Ngày:</label>
+  <input type="date" id="inputDate" onclick="if(typeof this.showPicker === 'function') { try { this.showPicker(); } catch(e) {} }">
+  <label>Ca:</label>
+  <select id="inputShift">
+    <option value="">Hiện tại</option>
+    <option value="Ca 1">Ca 1</option>
+    <option value="Ca 2">Ca 2</option>
+    <option value="Ca 3">Ca 3</option>
+  </select>
+  <button onclick="loadCustom()">Xem</button>
+  <button onclick="loadCurrent()" style="background:var(--bg-card);border:1px solid var(--border)">⟳ Ca hiện tại</button>
+</div>
+
+<!-- REAL-TIME ALERTS -->
+<div class="alerts-box" id="alertsBox">
+  <h3>🔔 CẢNH BÁO TRONG CA</h3>
+  <ul id="alertsList"></ul>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid" id="summaryGrid">
+  <div class="summary-card card-blue"><div class="num" id="sumTotal">-</div><div class="label">Tổng máy Machine Checklist</div></div>
+  <div class="summary-card card-green"><div class="num" id="sumDone">-</div><div class="label">Hoàn thành Machine Checklist</div></div>
+  <div class="summary-card card-yellow"><div class="num" id="sumProgress">-</div><div class="label">Đang thực hiện Machine Checklist</div></div>
+  <div class="summary-card card-red"><div class="num" id="sumMissing">-</div><div class="label">Chưa kiểm tra Machine Checklist</div></div>
+  <div class="summary-card card-purple"><div class="num" id="sumPending">-</div><div class="label">Chờ duyệt Machine Checklist</div></div>
+  <div class="summary-card card-red"><div class="num" id="sumCOMissing">-</div><div class="label">Thiếu Changeover</div></div>
+  <div class="summary-card card-red"><div class="num" id="sumErrors">-</div><div class="label">Lỗi thông số</div></div>
+  <div class="summary-card card-red"><div class="num" id="sumUnapproved">-</div><div class="label">Giao dịch chưa duyệt</div></div>
+</div>
+
+<!-- PANELS -->
+<div class="panels">
+
+  <!-- Panel 3: Error Alerts (Ưu tiên lên đầu) -->
+  <div class="panel" id="panelErrors">
+    <div class="panel-header">
+      <div class="panel-title">⚠️ ERROR ALERTS <span class="panel-badge st st-miss" id="errBadge">--</span></div>
+    </div>
+    <div class="panel-body" id="errBody"><div class="loading"><div class="spinner"></div>Đang tải...</div></div>
+  </div>
+
+  <!-- Panel 4: Unapproved Transactions -->
+  <div class="panel" id="panelUnapproved" style="display:none">
+    <div class="panel-header" style="background:rgba(239,68,68,.03)">
+      <div class="panel-title" style="color:var(--accent-red)">⚠️ GIAO DỊCH CHƯA DUYỆT <span class="panel-badge st st-miss" id="unapprovedBadge">--</span></div>
+    </div>
+    <div class="panel-body" id="unapprovedBody"></div>
+  </div>
+
+  <!-- Panel 1: Machine Checklist -->
+  <div class="panel" id="panelChecklist">
+    <div class="panel-header">
+      <div class="panel-title">📋 MACHINE CHECKLIST <span class="panel-badge st st-done" id="checkBadge">--</span></div>
+    </div>
+    <div class="panel-body" id="checkBody"><div class="loading"><div class="spinner"></div>Đang tải...</div></div>
+  </div>
+
+  <!-- Panel 2: Changeover Compliance -->
+  <div class="panel" id="panelChangeover">
+    <div class="panel-header">
+      <div class="panel-title">🔄 CHANGEOVER COMPLIANCE <span class="panel-badge st st-done" id="coBadge">--</span></div>
+    </div>
+    <div class="panel-body" id="coBody"><div class="loading"><div class="spinner"></div>Đang tải...</div></div>
+  </div>
+
+</div>
+
+<script>
+// =====================================================
+// Dashboard Client Logic
+// =====================================================
+var REFRESH_MS = 5 * 60 * 1000; // 5 phút
+var refreshTimer = null;
+var isCustomView = false;
+
+function init() {
+  loadCurrent();
+  startAutoRefresh();
+}
+
+function startAutoRefresh() {
+  if (refreshTimer) clearInterval(refreshTimer);
+  refreshTimer = setInterval(function() {
+    if (!isCustomView) loadCurrent();
+  }, REFRESH_MS);
+}
+
+function loadCurrent() {
+  isCustomView = false;
+  document.getElementById('inputDate').value = '';
+  document.getElementById('inputShift').value = '';
+  document.getElementById('badgeLive').style.display = 'flex';
+  fetchData({ forceRefresh: true });
+}
+
+function loadCustom() {
+  var d = document.getElementById('inputDate').value;
+  var s = document.getElementById('inputShift').value;
+  if (!d || !s) { alert('Vui lòng chọn cả Ngày và Ca'); return; }
+  isCustomView = true;
+  document.getElementById('badgeLive').style.display = 'none';
+  fetchData({ date: d, shift: s });
+}
+
+function fetchData(params) {
+  showLoading();
+  google.script.run
+    .withSuccessHandler(function(json) { render(JSON.parse(json)); })
+    .withFailureHandler(function(err) { showError(err.message); })
+    .getDashboardData(params);
+}
+
+function showLoading() {
+  var msg = '<div class="loading"><div class="spinner"></div>Đang tải dữ liệu...</div>';
+  ['checkBody','coBody','errBody','unapprovedBody'].forEach(function(id){ var el = document.getElementById(id); if (el) el.innerHTML = msg; });
+}
+
+function showError(msg) {
+  var html = '<div class="empty" style="color:var(--accent-red)">❌ Lỗi: ' + msg + '</div>';
+  ['checkBody','coBody','errBody','unapprovedBody'].forEach(function(id){ var el = document.getElementById(id); if (el) el.innerHTML = html; });
+}
+
+// =====================================================
+// RENDER
+// =====================================================
+function render(data) {
+  // Header
+  document.getElementById('areaName').textContent = data.area || 'MIXING';
+  document.getElementById('badgeShift').textContent = '📅 ' + data.date + ' | ' + data.shift;
+  document.getElementById('metaTime').textContent = 'Cập nhật: ' + data.generatedAt;
+
+  // Summary
+  var s = data.summary || {};
+  document.getElementById('sumTotal').textContent = s.total || 0;
+  document.getElementById('sumDone').textContent = s.done || 0;
+  document.getElementById('sumProgress').textContent = s.inProgress || 0;
+  document.getElementById('sumMissing').textContent = s.missing || 0;
+  document.getElementById('sumPending').textContent = s.pendingApproval || 0;
+
+  var coMissing = (data.changeover && data.changeover.summary) ? data.changeover.summary.missing : 0;
+  document.getElementById('sumCOMissing').textContent = coMissing;
+  document.getElementById('sumErrors').textContent = (data.errors ? data.errors.filter(function(e){ return e.remedyStatus !== 'Đã khắc phục'; }).length : 0);
+
+  var unapprovedCount = data.unapprovedTransactions ? data.unapprovedTransactions.length : 0;
+  document.getElementById('sumUnapproved').textContent = unapprovedCount;
+
+  // Real-time alerts
+  buildAlerts(data);
+
+  // Panels
+  renderChecklist(data.checklist || []);
+  renderChangeover(data.changeover);
+  renderErrors(data.errors || []);
+  renderUnapproved(data.unapprovedTransactions || []);
+}
+
+// =====================================================
+// ALERTS
+// =====================================================
+function buildAlerts(data) {
+  var items = [];
+  if (data.errors && data.errors.length > 0) {
+    data.errors.forEach(function(e) {
+      if (e.remedyStatus !== 'Đã khắc phục') {
+        items.push('❌ Phát hiện lỗi tại máy ' + e.machine + ' (' + e.errorLocation + ' - ' + e.errorNote + ') — ' + shortEmail(e.operator));
+      }
+    });
+  }
+  if (data.checklist) {
+    data.checklist.forEach(function(c) {
+      if (c.status === 'Chưa hoàn thành') items.push(c.machine + ' chưa kiểm tra máy');
+    });
+  }
+  if (data.changeover && data.changeover.required) {
+    data.changeover.required.forEach(function(r) {
+      if (r.status.indexOf('Thiếu') >= 0) items.push(r.machine + ' thiếu Changeover (' + r.oldProduct + ' → ' + r.newProduct + ') — ' + shortEmail(r.responsiblePerson));
+    });
+  }
+  if (data.unapprovedTransactions && data.unapprovedTransactions.length > 0) {
+    data.unapprovedTransactions.forEach(function(tx) {
+      items.push('⚠️ Giao dịch ' + tx.type + ' chưa được duyệt: Máy ' + tx.machine + ' | Batch ' + tx.batch + ' (' + tx.product + ') - Trạng thái: ' + tx.state + ' — ' + shortEmail(tx.operator));
+    });
+  }
+  var box = document.getElementById('alertsBox');
+  var list = document.getElementById('alertsList');
+  if (items.length > 0) {
+    box.classList.add('show');
+    list.innerHTML = items.map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('');
+  } else {
+    box.classList.remove('show');
+  }
+}
+
+// =====================================================
+// PANEL 1: CHECKLIST
+// =====================================================
+function renderChecklist(items) {
+  var el = document.getElementById('checkBody');
+  var badge = document.getElementById('checkBadge');
+  if (!items || items.length === 0) { el.innerHTML = '<div class="empty">Không có dữ liệu cho ca này</div>'; badge.textContent = '0'; return; }
+
+  var done = items.filter(function(i){ return i.status === 'Hoàn thành'; }).length;
+  badge.textContent = done + '/' + items.length;
+  badge.className = 'panel-badge st ' + (done === items.length ? 'st-done' : 'st-miss');
+
+  var html = '<table><thead><tr><th>#</th><th>Máy</th><th>Nhóm</th><th>Người thực hiện</th><th>Tình trạng máy</th><th>Trạng thái</th><th>Phê duyệt</th></tr></thead><tbody>';
+  items.forEach(function(item, idx) {
+    var stClass = item.status === 'Hoàn thành' ? 'st-done' : item.status === 'Đang thực hiện' ? 'st-progress' : 'st-miss';
+    var apClass = item.approval === 'Đã duyệt' ? 'st-done' : item.approval === 'Chưa duyệt' ? 'st-wait' : '';
+    html += '<tr><td>' + (idx+1) + '</td><td><strong>' + esc(item.machine) + '</strong></td><td>' + esc(item.group) + '</td>';
+    html += '<td>' + shortEmail(item.operator) + '</td><td>' + esc(item.machineStatus) + '</td>';
+    html += '<td><span class="st ' + stClass + '">' + statusIcon(item.status) + ' ' + esc(item.status) + '</span></td>';
+    html += '<td>' + (apClass ? '<span class="st ' + apClass + '">' + esc(item.approval) + '</span>' : esc(item.approval)) + '</td></tr>';
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// =====================================================
+// PANEL 2: CHANGEOVER
+// =====================================================
+function renderChangeover(co) {
+  var el = document.getElementById('coBody');
+  var badge = document.getElementById('coBadge');
+  if (!co || !co.required || co.required.length === 0) {
+    el.innerHTML = '<div class="empty">✅ Không có yêu cầu Changeover trong ca này</div>';
+    badge.textContent = '0'; badge.className = 'panel-badge st st-done'; return;
+  }
+
+  var s = co.summary;
+  badge.textContent = s.done + '/' + s.total;
+  badge.className = 'panel-badge st ' + (s.missing > 0 ? 'st-miss' : 'st-done');
+
+  var html = '<table><thead><tr><th>#</th><th>Máy</th><th>Old Bundle</th><th>New Bundle</th><th>Old Color</th><th>New Color</th><th>Người chịu trách nhiệm</th><th>Trạng thái</th></tr></thead><tbody>';
+  co.required.forEach(function(r, idx) {
+    var cls = r.status.indexOf('✅') >= 0 ? 'st-done' : r.status.indexOf('🔄') >= 0 ? 'st-progress' : r.status.indexOf('⏳') >= 0 ? 'st-wait' : 'st-miss';
+    html += '<tr><td>' + (idx+1) + '</td><td><strong>' + esc(r.machine) + '</strong></td>';
+    html += '<td>' + esc(r.oldProduct) + '</td><td>' + esc(r.newProduct) + '</td>';
+    html += '<td>' + esc(r.oldColor) + '</td><td>' + esc(r.newColor) + '</td>';
+    html += '<td>' + shortEmail(r.responsiblePerson) + '</td>';
+    html += '<td><span class="st ' + cls + '">' + esc(r.status) + '</span></td></tr>';
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// =====================================================
+// PANEL 3: ERRORS
+// =====================================================
+function renderErrors(items) {
+  var el = document.getElementById('errBody');
+  var badge = document.getElementById('errBadge');
+  if (!items || items.length === 0) {
+    el.innerHTML = '<div class="empty">✅ Không có lỗi thông số nào trong ca này</div>';
+    badge.textContent = '0'; badge.className = 'panel-badge st st-done'; return;
+  }
+
+  var unresolved = items.filter(function(e){ return e.remedyStatus !== 'Đã khắc phục'; }).length;
+  badge.textContent = unresolved + '/' + items.length;
+  badge.className = 'panel-badge st ' + (unresolved > 0 ? 'st-miss' : 'st-done');
+
+  var html = '<table><thead><tr><th>#</th><th>Máy</th><th>Sản phẩm</th><th>Batch</th><th>Màu</th><th>Vị trí lỗi</th><th>Loại lỗi</th><th>Người nhập</th><th>Trạng thái</th></tr></thead><tbody>';
+  items.forEach(function(e, idx) {
+    var remedyCls = e.remedyStatus === 'Đã khắc phục' ? 'st-done' : 'st-miss';
+    var remedyIcon = e.remedyStatus === 'Đã khắc phục' ? '✅' : '❌';
+    html += '<tr><td>' + (idx+1) + '</td><td><strong>' + esc(e.machine) + '</strong></td>';
+    html += '<td>' + esc(e.product) + '</td><td>' + esc(e.batch) + '</td><td>' + esc(e.color) + '</td>';
+    html += '<td>' + esc(e.errorLocation) + '</td><td>' + esc(e.errorNote) + '</td>';
+    html += '<td>' + shortEmail(e.operator) + '</td>';
+    html += '<td><span class="st ' + remedyCls + '">' + remedyIcon + ' ' + esc(e.remedyStatus) + '</span></td></tr>';
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// =====================================================
+// PANEL 4: UNAPPROVED TRANSACTIONS
+// =====================================================
+function renderUnapproved(items) {
+  var panel = document.getElementById('panelUnapproved');
+  var el = document.getElementById('unapprovedBody');
+  var badge = document.getElementById('unapprovedBadge');
+
+  if (!items || items.length === 0) {
+    if (panel) panel.style.display = 'none';
+    if (el) el.innerHTML = '';
+    if (badge) badge.textContent = '0';
+    return;
+  }
+
+  if (panel) panel.style.display = 'block';
+  if (badge) {
+    badge.textContent = items.length;
+    badge.className = 'panel-badge st st-miss';
+  }
+
+  var html = '<table><thead><tr><th>#</th><th>Loại</th><th>Máy</th><th>Sản phẩm</th><th>Batch</th><th>Người thực hiện</th><th>Trạng thái</th></tr></thead><tbody>';
+  items.forEach(function(item, idx) {
+    var typeBadge = item.type === 'Mixing' ? 'st-wait' : 'st-progress';
+    var stateUpper = (item.state || '').toUpperCase();
+    var stateCls = 'st-miss';
+    if (stateUpper === 'APPROVED') stateCls = 'st-done';
+    
+    html += '<tr><td>' + (idx+1) + '</td>';
+    html += '<td><span class="st ' + typeBadge + '">' + esc(item.type) + '</span></td>';
+    html += '<td><strong>' + esc(item.machine) + '</strong></td>';
+    html += '<td>' + esc(item.product) + '</td>';
+    html += '<td>' + esc(item.batch) + '</td>';
+    html += '<td>' + shortEmail(item.operator) + '</td>';
+    html += '<td><span class="st ' + stateCls + '">' + esc(item.state) + '</span></td></tr>';
+  });
+  html += '</tbody></table>';
+  if (el) el.innerHTML = html;
+}
+
+// =====================================================
+// HELPERS
+// =====================================================
+function esc(s) { if (!s) return '-'; var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+function shortEmail(e) { if (!e || e === '-') return '-'; return esc(e.split('@')[0].replace(/_/g,' ')); }
+function statusIcon(s) { if (s === 'Hoàn thành') return '✅'; if (s === 'Đang thực hiện') return '🔄'; return '❌'; }
+
+// Start
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+Ngày,Ca,Máy,Sản phẩm,Batch,Màu Y/C,Vị trí lỗi,Mã Thực Tế,TS Thực,TS Chuẩn (Master),Độ lệch,BOM Chuẩn (Gợi ý),Ghi chú Lỗi,Người nhập,Nguyên nhân,Trạng thái khắc phục
+07/01/2026,1,M02,K5+,0076NM0202,HONG,Vật tư 1,M43203,"86,5","86,7","-0,2","[Nhựa] M43203: 86.7
+[Màu] M33394: 57.5
+[] : 38",Sai thông số,dat_nguyen_chi@colpal.com,OP trộn có đọc BOM khi trộn nhưng không lấy số nhập từ máy trộn để nhập vào nhật ký trộn mà nhớ ( mở 2 tab bật qua bật lại sẽ quên),N/A
+07/01/2026,1,M02,K2+,0076NM0201,HONG,Vật tư 1,M43203,"86,5","86,7","-0,2","[Nhựa] M43203: 86.7
+[Màu] M33394: 57.5
+[] : 38",Sai thông số,dat_nguyen_chi@colpal.com,OP trộn có đọc BOM khi trộn nhưng không lấy số nhập từ máy trộn để nhập vào nhật ký trộn mà nhớ ( mở 2 tab bật qua bật lại sẽ quên),N/A
+07/01/2026,2,M02,SFBK_21,0076PM0201,DUONG,Màu (Color),M27640,"68,2","68,5","-0,3","[Nhựa] M43203: 62.7
+[Màu] M27640: 68.5",Sai thông số,nhi_nguyen_van@colpal.com,OP trộn có đọc BOM khi trộn nhưng không lấy số nhập từ máy trộn để nhập vào nhật ký trộn mà nhớ ( mở 2 tab bật qua bật lại sẽ quên),N/A
+07/01/2026,2,M03,SFBK_21,0076PM0301,LA,Vật tư 1,M43203,"62,7","43,2","19,5","[Nhựa] M43203: 43.2
+[Màu] M28931: 51",Sai thông số,nhi_nguyen_van@colpal.com,OP trộn tạo thông tin chung sai tên máy thực tế trộn trên M02,N/A
+07/01/2026,2,M03,SFBK_21,0076PM0301,LA,Màu (Color),M28931,78,51,27,"[Nhựa] M43203: 43.2
+[Màu] M28931: 51",Sai thông số,nhi_nguyen_van@colpal.com,OP trộn tạo thông tin chung sai tên máy thực tế trộn trên M02,N/A
+08/01/2026,2,M06,ZZGC_24,0086PM0601,HONG,Màu (Color),M44307,0,---,-,"[Nhựa] M27839: 0
+[Màu] M33394: 0",Mã VT lạ (Không có trong Master),nhi_nguyen_van@colpal.com,Cell owner Tiến trộn sau đó nhờ bạn Nhí làm nhật ký trộn giúp nhưng bạn Nhí nghe nhầm nên scan nhầm mã M,N/A
+09/01/2026,1,M07,TW_23,0096NM0707,N/A,Vật tư 1,M31520,"49,7",---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),can_ngo_van@colpal.com,OP trộn tạo thông tin chung sai tên máy thực tế trộn trên M05 đã Hủy nhật ký trộn và yêu cầu tạo lại,N/A
+09/01/2026,1,M07,TW_23,0096NM0707,N/A,Vật tư 2,M40985,"22,4",---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),can_ngo_van@colpal.com,OP trộn tạo thông tin chung sai tên máy thực tế trộn trên M05 đã Hủy nhật ký trộn và yêu cầu tạo lại,N/A
+10/01/2026,2,M07,SF_24RPP,0106PM0712,N/A,Vật tư 1,M38272,60,---,-,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,OP tạo nhật ký trộn BUNDLE EC_22RPP nhưng bấm chọn nhầm thành SF_24RPP -> sau khi submit thì scan tank vào thì báo lỗi sai BUNLDE nên đã tiến hành cancle và tạo lại nhật ký mới,N/A
+10/01/2026,2,M07,SF_24RPP,0106PM0712,N/A,Vật tư 2,M46537,40,---,-,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,OP tạo nhật ký trộn BUNDLE EC_22RPP nhưng bấm chọn nhầm thành SF_24RPP -> sau khi submit thì scan tank vào thì báo lỗi sai BUNLDE nên đã tiến hành cancle và tạo lại nhật ký mới,N/A
+12/01/2026,3,M07,EC_22RPP,0126QM0702,N/A,Màu (Color),M38272,0,60,-60,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Sai thông số,dat_nguyen_chi@colpal.com,"Scan nhầm HU nhựa vào cột HU màu dẩn đến sai thông số,đã hủy mẽ trộn và tạo lại nhật ký trộn mới.",N/A
+13/01/2026,3,M02,K2+,0136QM0201,HONG,Màu (Color),M33394,"59,8","57,5","2,3","[Nhựa] M43203: 86.7
+[Màu] M33394: 57.5
+[] : 38",Sai thông số,dat_nguyen_chi@colpal.com,"OP đang nhập đúng với thực tế trên BOM mẫu,AL xem lại giúp thông số phần BOM chuẩn(gợi ý)trên file  không giống với BOM mẩu Portal->KTV chưa cập nhật thông số mới trên master Data->thông số đúng là 59.8Hz",N/A
+13/01/2026,3,M02,K5+,0136QM0204,TIM,Màu (Color),M25044,"57,5","59,2","-1,7","[Nhựa] M43203: 86.7
+[Màu] M25044: 59.2
+[] : 36.5",Sai thông số,dat_nguyen_chi@colpal.com,"OP đang nhập đúng với thực tế trên BOM mẫu,AL xem lại giúp thông số phần BOM chuẩn(gợi ý)trên file  không giống với BOM mẩu Portal->KTV chưa cập nhật thông số mới trên master Data->thông số đúng là 57.5Hz",N/A
+13/01/2026,1,M02,K2+,0136NM0202,HONG,Màu (Color),M33394,"57,5","59,8","-2,3","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.8
+[] : 38",Sai thông số,nhi_nguyen_van@colpal.com,OP nhập theo thông số cũ do trộn trước khi thông số mới được cập nhật,N/A
+13/01/2026,1,M02,K5+,0136NM0204,TIM,Màu (Color),M25044,"59,2","57,5","1,7","[Nhựa] M43203: 86.7
+[Màu] M25044: 57.5
+[] : 35.5",Sai thông số,nhi_nguyen_van@colpal.com,OP nhập theo thông số cũ do trộn trước khi thông số mới được cập nhật,N/A
+15/01/2026,1,M02,K2+,0156NM0201,DUONG,Màu (Color),M27640,"61,8","63,44827586","-1,65","[Nhựa] M43203: 86.7
+[Màu] M27640: 63.44827586206897
+[] : 37.545525291828795",Sai thông số,nhi_nguyen_van@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,1,M02,K5+,0156NM0203,TIM,Màu (Color),M25044,"57,5",60,"-2,5","[Nhựa] M43203: 86.7
+[Màu] M25044: 60
+[] : 37.545525291828795",Sai thông số,nhi_nguyen_van@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,CC_21,0156PM0209,DUONG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,CC_21,0156PM0209,DUONG,Màu (Color),M25064,"60,4","54,42857143","5,97","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,CC_21,0156PM0208,LA,Màu (Color),M38252,"71,5","72,70714286","-1,21","[Nhựa] M38272: 63.50999999999999
+[Màu] M38252: 72.70714285714284",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,DACC_20,0156PM0203,LA,Vật tư 1,M43203,50,"50,575","-0,57","[Nhựa] M43203: 50.574999999999996
+[Màu] M28931: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,DA_22,0156PM0206,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,PC_22,0156PM0205,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,DACC_20,0156PM0201,DUONG,Vật tư 1,M43203,50,"50,575","-0,57","[Nhựa] M43203: 50.574999999999996
+[Màu] M27640: 92.5287356321839",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,DACC_20,0156PM0201,DUONG,Màu (Color),M27640,84,"92,52873563","-8,53","[Nhựa] M43203: 50.574999999999996
+[Màu] M27640: 92.5287356321839",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,CC_21,0156PM0210,TIM,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M32083: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,SFBK_21,0156PM0202,DUONG,Vật tư 1,M43203,"62,7","62,8575","-0,16","[Nhựa] M43203: 62.857499999999995
+[Màu] M27640: 69",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,SFBK_21,0156PM0202,DUONG,Màu (Color),M27640,"68,5",69,"-0,5","[Nhựa] M43203: 62.857499999999995
+[Màu] M27640: 69",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,CC_21,0156PM0207,DO,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M22711: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+15/01/2026,2,M02,SFBK_21,0156PM0204,LA,Vật tư 1,M43203,"62,7","62,8575","-0,16","[Nhựa] M43203: 62.857499999999995
+[Màu] M28931: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0203,DUONG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0203,DUONG,Màu (Color),M25064,"60,4","54,42857143","5,97","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0201,DO,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M22711: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0202,LA,Màu (Color),M38252,"71,5","72,70714286","-1,21","[Nhựa] M38272: 63.50999999999999
+[Màu] M38252: 72.70714285714284",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0204,TIM,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M32083: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,PC_22,0166PM0205,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,DA_22,0166PM0206,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,SFBK_21,0166PM0207,DUONG,Vật tư 1,M43203,"62,7","62,8575","-0,16","[Nhựa] M43203: 62.857499999999995
+[Màu] M27640: 69",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,SFBK_21,0166PM0207,DUONG,Màu (Color),M27640,"68,5",69,"-0,5","[Nhựa] M43203: 62.857499999999995
+[Màu] M27640: 69",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,K2+,0166PM0208,HONG,Màu (Color),M33394,"59,8","59,14285714","0,66","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.14285714285713
+[] : 37.545525291828795",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,2,M02,CC_21,0166PM0209,TIM,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M32083: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+16/01/2026,3,M02,K2+,0166QM0201,HONG,Màu (Color),M33394,"59,8","59,14285714","0,66","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.14285714285713
+[] : 37.545525291828795",Sai thông số,can_ngo_van@colpal.com,OP nhập đúng theo BOM,N/A
+17/01/2026,1,M02,K2+,0176NM0201,HONG,Màu (Color),M33394,"59,8","59,14285714","0,66","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.14285714285713
+[] : 37.545525291828795",Sai thông số,nhi_nguyen_van@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,PC_22,0176PM0202,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,SFBK_21,0176PM0201,LA,Vật tư 1,M43203,"62,7","62,8575","-0,16","[Nhựa] M43203: 62.857499999999995
+[Màu] M28931: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,DA_22,0176PM0203,TRANG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M37998: 48.9",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,CC_21,0176PM0206,TIM,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M32083: ",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,CC_21,0176PM0204,LA,Màu (Color),M38252,"71,5","72,70714286","-1,21","[Nhựa] M38272: 63.50999999999999
+[Màu] M38252: 72.70714285714284",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,CC_21,0176PM0205,DUONG,Vật tư 1,M38272,88,"87,6","0,4","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+17/01/2026,2,M02,CC_21,0176PM0205,DUONG,Màu (Color),M25064,"60,4","54,42857143","5,97","[Nhựa] M38272: 87.6
+[Màu] M25064: 54.42857142857142",Sai thông số,cuong_nguyen_quoc@colpal.com,ME Cường Nguyễn test code thông số trộn mới dẫn đến sai lệch so với thông số Master cũ,N/A
+19/01/2026,2,M02,CC_21,0196PM0204,N/A,Màu (Color),M22711,"61,2",---,-,"[Nhựa] M38272: 88
+[Nhựa] M40443: 59.7",Mã VT lạ (Không có trong Master),can_ngo_van@colpal.com,"OP nhập sai thông tin chọn N/A trong khi đang tron màu đỏ M22711,đã hủy tạo lại nhật ký mới ",N/A
+19/01/2026,2,M02,SF_24RPP,0196PM0208,LA,Vật tư 1,M43203,"63,5",---,-,"[Nhựa] M38272: 63.5
+[Màu] M28931: 78",Mã VT lạ (Không có trong Master),can_ngo_van@colpal.com,OP chọn sai tên sản phẩm->đã Cancle và tạo lại mẻ mới,N/A
+19/01/2026,2,M02,SFBK_21,0196PM0209,LA,Vật tư 1,M43203,"63,5","62,7","0,8","[Nhựa] M43203: 62.7
+[Màu] M28931: 78",Sai thông số,can_ngo_van@colpal.com,OP xem nhầm thông số của nhựa resin bundle SF_24RPP do tạo nhầm nhật ký trộn của mẻ trước và chỉ đổi mã nhựa quên không xem lại thông số->không kiểm tra lại dẫn đến sai thông số nhựa resin,N/A
+20/01/2026,1,M07,EC_22RPP,0206NM0702,N/A,Vật tư 1,M46537,"53,6",40,"13,6","[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Sai thông số,bon_van_tien@colpal.com,OP nhập lộn số Kg thành thông số trộn->đã Cancle và tạo lại mẻ mới,N/A
+20/01/2026,3,M08,ZZAB_22,0206QM0803,N/A,Vật tư 1,M38272,60,55,5,"[Nhựa] M40443: 45
+[Nhựa] M38272: 55",Sai thông số,dang_mai@colpal.com,OP chọn sai tên sản phẩm (tên sản phẩm đúng là PC22) -> đã Cancle và tạo lại mẻ mới,N/A
+20/01/2026,3,M08,ZZAB_22,0206QM0803,N/A,Vật tư 2,M41908,40,---,-,"[Nhựa] M40443: 45
+[Nhựa] M38272: 55",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,OP chọn sai tên sản phẩm (tên sản phẩm đúng là PC22) -> đã Cancle và tạo lại mẻ mới,N/A
+24/01/2026,1,M08,ZZ_25,0246NM0802,N/A,Vật tư 1,M41908,"75,5",75,"0,5","[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,bon_van_tien@colpal.com,OP mới nhập sai thông số ->submit xong kiểm tra lại thấy sai nên đã huỷ và tạo lại mẻ mới,N/A
+26/01/2026,2,M02,ZZ_25,0266PM0212,LA,Màu (Color),M38252,"58,8","58,5","0,3","[Nhựa] M27839: 78.5
+[Màu] M38252: 58.5",Sai thông số,nhi_nguyen_van@colpal.com,OP nhập sai thông số màu M38252 (thông số đúng là 58.5) -> đã clear tank và nhập lại bundle ZZ25 đúng thông số,N/A
+26/01/2026,3,M02,K5+,0266QM0203,TIM,Màu (Color),M25044,57,"57,5","-0,5","[Nhựa] M43203: 86.7
+[Màu] M25044: 57.5
+[] : 35.5",Sai thông số,manh_nguyen_van@colpal.com,OP nhập sai thông số nhựa M43203 (thông số đúng là 86.7) -> đã clear tank và nhập lại,N/A
+27/01/2026,1,M02,K2+,0276NM0202,HONG,Màu (Color),M33394,"57,5","59,8","-2,3","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.8
+[] : 38",Sai thông số,tung_hoang_thanh@colpal.com,OP nhập sai thông số màu M33394 (thông số đúng là 59.8) -> đã clear tank và nhập lại bundle K2+ đúng thông số,N/A
+27/01/2026,2,M07,ZZAB_22,0276PM0703,N/A,Vật tư 1,M38272,60,55,5,"[Nhựa] M40443: 45
+[Nhựa] M38272: 55",Sai thông số,dang_mai@colpal.com,OP nhập sai thông số nhựa  M38272 & M40443 (thông số đúng là M38272 55% + M40443 45%) -> đã clear tank và nhập lại bundle ZZAB_22 đúng thông số chuẩn,N/A
+27/01/2026,2,M07,ZZAB_22,0276PM0703,N/A,Vật tư 2,M40443,40,45,-5,"[Nhựa] M40443: 45
+[Nhựa] M38272: 55",Sai thông số,dang_mai@colpal.com,OP nhập sai thông số nhựa  M38272 & M40443 (thông số đúng là M38272 55% + M40443 45%) -> đã clear tank và nhập lại bundle ZZAB_22 đúng thông số chuẩn,N/A
+28/01/2026,1,M05,TW_23,0286NM0502,N/A,Màu (Color),M40985,0,"22,4","-22,4","[Nhựa] M31520: 49.7
+[Nhựa] M40985: 22.4",Sai thông số,tan_huynh_cong@colpal.com,OP nhập nhầm nhựa M40985 sang mã màu -> đã clear tank và nhập lại bundle TW mới,N/A
+28/01/2026,3,M02,K2+,0286QM0202,HONG,Vật tư 1,M43203,"87,6","86,7","0,9","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.8
+[] : 38",Sai thông số,manh_nguyen_van@colpal.com,OP nhập nhầm thông số từ 86.7 thành 87.6->đã phát hiện và tiến hàng Cancle và tạo mẻ mới,Điều tra lại nguyên nhân thực sự
+28/01/2026,3,M07,CC_21,0286QM0704,N/A,Vật tư 2,M38272,0,60,-60,"[Nhựa] M40443: 40
+[Nhựa] M38272: 60",Sai thông số,bon_van_tien@colpal.com,OP tạo nhật ký trộn nhập thiếu thông số của Mã nhựa 2,Điều tra lại nguyên nhân thực sự
+30/01/2026,3,M02,ZZ_25,0306QM0204,LA,Màu (Color),M38252,"63,5","58,5",5,"[Nhựa] M27839: 78.5
+[Màu] M38252: 58.5",Sai thông số,manh_nguyen_van@colpal.com,OP nhập sai thông số màu M38252(thông số đúng là 58.5) -> đã clear tank và nhập lại,Điều tra lại nguyên nhân thực sự
+02/02/2026,3,M08,ZZ_25,0336QM0803,N/A,Vật tư 1,M38272,75,25,50,"[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,tung_hoang_thanh@colpal.com,0P Nhập nhầm 2 thông số nhựa với nhau đã lear tank va tạo nhật ký  mới,N/A
+02/02/2026,3,M08,ZZ_25,0336QM0803,N/A,Vật tư 2,M41908,25,75,-50,"[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,tung_hoang_thanh@colpal.com,0P Nhập nhầm 2  thông số nhựa với nhau đã lear tank va tạo nhật ký  mới,N/A
+03/02/2026,1,M06,TW_25,0346NM0602,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+03/02/2026,1,M06,TW_25,0346NM0602,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+03/02/2026,1,M06,TW_25,0346NM0603,LA,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),dang_mai@colpal.com,Trộn PQ bundle mới,N/A
+03/02/2026,1,M06,TW_25,0346NM0603,LA,Màu (Color),M20048,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),dang_mai@colpal.com,Trộn PQ bundle mới,N/A
+03/02/2026,3,M02,K5+,0346QM0202,TIM,Màu (Color),M25044,"35,5","57,5",-22,"[Nhựa] M43203: 86.7
+[Màu] M25044: 57.5
+[] : 35.5",Sai thông số,tung_hoang_thanh@colpal.com,"OP nhập nhầm thông số màu,đã hủy và tạo lại nhật ký mới",N/A
+04/02/2026,2,M07,CC_21,0356PM0702,N/A,Vật tư 1,M38272,40,60,-20,"[Nhựa] M40443: 40
+[Nhựa] M38272: 60",Sai thông số,bon_van_tien@colpal.com,thay dổi cách nhập từ scan tank sang sacn trực tiêp pale nên nhầm phiểu 1 và phiểu 2 đã nhập lại thông tin mẽ trộn,N/A
+04/02/2026,2,M07,CC_21,0356PM0702,N/A,Vật tư 2,M40443,60,40,20,"[Nhựa] M40443: 40
+[Nhựa] M38272: 60",Sai thông số,bon_van_tien@colpal.com,thay dổi cách nhập từ scan tank sang sacn trực tiêp pale nên nhầm phiểu 1 và phiểu 2 đã nhập lại thông tin mẽ trộn,N/A
+05/02/2026,2,M07,EC_22RPP,0366PM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,bạn scan lộn mã nhựa đã huỷ mẽ và tao lại,N/A
+05/02/2026,2,M06,SFBK_25,0366PM0608,N/A,Màu (Color),M36876,0,---,-,"[Nhựa] M38272: 0
+[Nhựa] M40443: 0
+[Nhựa] M38272: 0
+[Nhựa] M40443: 0",Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,SFPK_25 nhật ký trộn không để màu đen nen bạn tạo mẽ trộn lại,N/A
+06/02/2026,2,M02,ZZCC_25,0376PM0209,DEN,Vật tư 1,M27839,"75,5","78,5",-3,"[Nhựa] M27839: 78.5
+[Màu] M36876: 34",Sai thông số,manh_nguyen_van@colpal.com,bạn nhập sai thông số đã hủy và nhập lại mẽ mới,N/A
+08/02/2026,1,M02,K5+,0396NM0201,TIM,Vật tư 1,M43203,0,"86,7","-86,7","[Nhựa] M43203: 86.7
+[Màu] M25044: 57.5
+[] : 35.5",Sai thông số,dang_mai@colpal.com,OP nhập nhầm thông số trộn qua khối lượng -> đã clear tank và nhập lại bundle  K5+ đúng,N/A
+08/02/2026,1,M02,K5+,0396NM0201,TIM,Màu (Color),M25044,0,"57,5","-57,5","[Nhựa] M43203: 86.7
+[Màu] M25044: 57.5
+[] : 35.5",Sai thông số,dang_mai@colpal.com,OP nhập nhầm thông số trộn qua khối lượng -> đã clear tank và nhập lại bundle  K5+ đúng,N/A
+08/02/2026,1,M06,TW_25,0396NM0603,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+08/02/2026,1,M06,TW_25,0396NM0603,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+08/02/2026,1,M02,K5+,0396NM0204,HONG,Màu (Color),M33394,"59,5","59,8","-0,3","[Nhựa] M43203: 86.7
+[Màu] M33394: 59.8
+[] : 38",Sai thông số,dang_mai@colpal.com,OP nhập sai thông số màu M33394 (thông số đúng là 59.8) -> đã clear tank và nhập lại bundle  K5+ đúng thông số chuẩn,N/A
+08/02/2026,2,M02,ZZ_25,0396PM0206,DUONG,Vật tư 1,M27839,"75,5","78,5",-3,"[Nhựa] M27839: 78.5
+[Màu] M25064: 63.5",Sai thông số,manh_nguyen_van@colpal.com,OP nhập sai thông số nhựa M27839 (thông số đúng là 78.5),N/A
+09/02/2026,2,M02,ZZ_25,0406PM0213,DUONG,Vật tư 1,M27839,78,"78,5","-0,5","[Nhựa] M27839: 78.5
+[Màu] M25064: 63.5",Sai thông số,manh_nguyen_van@colpal.com,OP nhập sai thông số nhựa M27839 (thông số đúng là 78.5),N/A
+09/02/2026,3,M06,CCDC,0406QM0602,N/A,Vật tư 1,M38272,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),minh_van_minh@colpal.com,để use cho đào tạo nhân viên mới nhưng mẽ này điều huỷ,N/A
+09/02/2026,3,M06,CCDC,0406QM0602,N/A,Vật tư 2,M40443,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),minh_van_minh@colpal.com,để use cho đào tạo nhân viên mới nhưng mẽ này điều huỷ,N/A
+09/02/2026,3,M06,CCDC,0406QM0602,N/A,Màu (Color),M37998,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),minh_van_minh@colpal.com,để use cho đào tạo nhân viên mới nhưng mẽ này điều huỷ,N/A
+09/02/2026,3,M08,ZZCC_25,0406QM0804,N/A,Vật tư 1,M38272,75,25,50,"[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,tan_huynh_cong@colpal.com,bạn nhập sai thông số phiểu 1 &2 đã nhạp lại,N/A
+09/02/2026,3,M08,ZZCC_25,0406QM0804,N/A,Vật tư 2,M41908,25,75,-50,"[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,tan_huynh_cong@colpal.com,bạn nhập sai thông số phiểu 1 &2 đã nhạp lại,N/A
+09/02/2026,3,M02,PRO_22CH,0406QM0209,DEN,Màu (Color),M36876,"35,2","35,29","-0,09","[Nhựa] M40533: 74
+[Màu] M36876: 35.29",Sai thông số,minh_van_minh@colpal.com,để use cho đào tạo nhân viên mới nhưng mẽ này điều huỷ,N/A
+10/02/2026,1,M07,TA_21,0416NM0701,N/A,Vật tư 2,M38272,60,50,10,"[Nhựa] M40443: 50
+[Nhựa] M38272: 50",Sai thông số,dang_mai@colpal.com,OP bấm nhầm thông số khi tạo nhật ký->đã cancle và tạo lại,N/A
+10/02/2026,1,M06,ZZ_25,0416NM0603,TIM,Màu (Color),M32083,0,---,-,"[Màu] M25044: 0
+[Nhựa] M27839: 0",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,Trộn PQ màu mới cho bundle ZZ_25,N/A
+10/02/2026,1,M06,TW_25,0416NM0604,CAM,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+10/02/2026,1,M06,TW_25,0416NM0604,CAM,Màu (Color),M29142,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+10/02/2026,3,M07,CC_21,0416QM0703,N/A,Vật tư 1,M40443,50,40,10,"[Nhựa] M40443: 40
+[Nhựa] M38272: 60",Sai thông số,tan_huynh_cong@colpal.com,OP bấm nhầm thông số khi tạo nhật ký->đã cancle và tạo lại,N/A
+10/02/2026,3,M07,CC_21,0416QM0703,N/A,Vật tư 2,M38272,50,60,-10,"[Nhựa] M40443: 40
+[Nhựa] M38272: 60",Sai thông số,tan_huynh_cong@colpal.com,OP bấm nhầm thông số khi tạo nhật ký->đã cancle và tạo lại,N/A
+11/02/2026,1,M06,TW_25,0426NM0602,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),dang_mai@colpal.com,Trộn PQ bundle mới,N/A
+11/02/2026,1,M06,TW_25,0426NM0602,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),dang_mai@colpal.com,Trộn PQ bundle mới,N/A
+11/02/2026,2,M07,EC_22RPP,0426PM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+11/02/2026,2,M07,EC_22RPP,0426PM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+11/02/2026,3,M07,EC_22RPP,0426QM0701,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+11/02/2026,3,M07,EC_22RPP,0426QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+11/02/2026,3,M05,TW_23,0426QM0501,N/A,Vật tư 1,M31520,"49,4","49,7","-0,3","[Nhựa] M31520: 49.7
+[Nhựa] M40985: 22.4",Sai thông số,tan_huynh_cong@colpal.com,bấm nhầm thông số máy M05 thông số cố định,N/A
+12/02/2026,1,M07,EC_22RPP,0436NM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+12/02/2026,1,M07,EC_22RPP,0436NM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+12/02/2026,2,M07,EC_22RPP,0436PM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+12/02/2026,3,M07,EC_22RPP,0436QM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+13/02/2026,1,M07,EC_22RPP,0446NM0701,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+13/02/2026,1,M07,EC_22RPP,0446NM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),dang_mai@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+13/02/2026,2,M07,EC_22RPP,0446PM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+13/02/2026,3,M07,EC_22RPP,0446QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+22/02/2026,3,M07,EC_22RPP,0536QM0701,N/A,Vật tư 2,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+22/02/2026,3,M07,EC_22RPP,0536QM0705,N/A,Vật tư 2,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+23/02/2026,1,M07,EC_22RPP,0546NM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+23/02/2026,1,M08,SF_24RPP,0546NM0802,N/A,Vật tư 1,M21165,39,61,-22,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Sai thông số,bon_van_tien@colpal.com,OP nhập ngược thông số của 2 phễu -> đã cancle và tạo mẻ mới,N/A
+23/02/2026,1,M08,SF_24RPP,0546NM0802,N/A,Vật tư 2,M41908,61,39,22,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Sai thông số,bon_van_tien@colpal.com,OP nhập ngược thông số của 2 phễu -> đã cancle và tạo mẻ mới,N/A
+23/02/2026,1,M07,EC_22RPP,0546NM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+23/02/2026,2,M07,EC_22RPP,0546PM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+23/02/2026,3,M07,EC_22RPP,0546QM0701,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+24/02/2026,1,M06,TW_25,0556NM0601,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,Trộn PQ bundle mới,N/A
+24/02/2026,1,M06,TW_25,0556NM0601,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,Trộn PQ bundle mới,N/A
+24/02/2026,1,M07,EC_22RPP,0556NM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+24/02/2026,1,M06,TW_25,0556NM0604,LA,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+24/02/2026,1,M06,TW_25,0556NM0604,LA,Màu (Color),M20048,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+24/02/2026,1,M07,EC_22RPP,0556NM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+24/02/2026,2,M07,EC_22RPP,0556PM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+24/02/2026,3,M07,EC_22RPP,0556QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+25/02/2026,1,M07,EC_22RPP,0566NM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+25/02/2026,1,M07,EC_22RPP,0566NM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+25/02/2026,2,M07,EC_22RPP,0566PM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+25/02/2026,2,M02,CP_09,0566PM0208,TRANG,Màu (Color),M19934,"34,3","34,2","0,1","[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Sai thông số,tan_huynh_cong@colpal.com,do số 2 và số 3 trên màn hình nằm cạnh nhau nên OP bấm nhầm,N/A
+25/02/2026,3,M07,EC_22RPP,0566QM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+26/02/2026,1,M07,EC_22RPP,0576NM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+26/02/2026,1,M07,EC_22RPP,0576NM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+26/02/2026,2,M06,ZZ_25,0576PM0601,TIM,Màu (Color),M32083,0,---,-,"[Màu] M25044: 0
+[Nhựa] M27839: 0",Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+26/02/2026,2,M07,EC_22RPP,0576PM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+26/02/2026,3,M07,EC_22RPP,0576QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+27/02/2026,1,M07,EC_22RPP,0586NM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+27/02/2026,1,M07,EC_22RPP,0586NM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+27/02/2026,1,M06,TW_25,0586NM0603,LA,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+27/02/2026,1,M06,TW_25,0586NM0603,LA,Màu (Color),M20048,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+27/02/2026,1,M06,TW_25,0586NM0604,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+27/02/2026,1,M06,TW_25,0586NM0604,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+27/02/2026,2,M07,EC_22RPP,0586PM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+27/02/2026,2,M02,ZZ_25,0586PM0203,TIM,Màu (Color),M25064,70,---,-,"[Nhựa] M27839: 78.5
+[Màu] M25044: 70",Mã VT lạ (Không có trong Master),nhi_nguyen_van@colpal.com,"OP quên tạo nhật ký trộn, sau khi trộn xong mang hết vật tư về layout thì mới tạo lại nhật ký, 2 mã M25044 và M25064 nằm kế nhau nên dẫn tới scan bị sai và OP không phát hiện được",N/A
+27/02/2026,3,M07,EC_22RPP,0586QM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+28/02/2026,1,M06,TW_25,0596NM0601,N/A,Vật tư 1,M31520,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+28/02/2026,1,M06,TW_25,0596NM0601,N/A,Vật tư 2,M40985,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,Trộn PQ bundle mới,N/A
+28/02/2026,1,M07,EC_22RPP,0596NM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+28/02/2026,1,M07,EC_22RPP,0596NM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+28/02/2026,2,M07,EC_22RPP,0596PM0705,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+28/02/2026,3,M07,EC_22RPP,0596QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+28/02/2026,3,M02,CP_09,0596QM0202,TRANG,Màu (Color),M19934,0,"34,2","-34,2","[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Sai thông số,tien_trung_tien@colpal.com,Nhập nhầm thông số trộn qua số khối lượng -> đã clear tank và tạo lại bundle mới ,N/A
+28/02/2026,3,M02,CP_09,0596QM0204,TRANG,Vật tư 1,M38272,"86,7",---,-,"[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Quên scan batch màu -> đã clear tank và tạo lại bundle mới  nhưng do đã change nhựa khác vào và OP lại không để ý nên scan sai cả batch nhựa,N/A
+28/02/2026,3,M02,CP_09,0596QM0205,TRANG,Vật tư 1,M38272,"86,7",---,-,"[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,OP tạo lại nhật ký nhưng lại scan sai Batch nhựa do change nhựa khác vào-> đã cancle và tạo lại nhật ký mới,N/A
+01/03/2026,1,M05,TW_23,0606NM0501,N/A,Vật tư 2,M40985,22,"22,4","-0,4","[Nhựa] M31520: 49.7
+[Nhựa] M40985: 22.4",Sai thông số,minh_van_minh@colpal.com,OP nhập thông số trên máy vào nhật ký bị sai nhưng không kiểm tra lại,N/A
+01/03/2026,1,M07,EC_22RPP,0606NM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),minh_van_minh@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+02/03/2026,1,M07,EC_22RPP,0616NM0702,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+02/03/2026,1,M07,EC_22RPP,0616NM0706,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+02/03/2026,2,M07,EC_22RPP,0616PM0704,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+02/03/2026,3,M07,EC_22RPP,0616QM0703,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),bon_van_tien@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+03/03/2026,1,M07,EC_22RPP,0626NM0701,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M46537: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,.thay đổi mã nhựa cho bundle EC-22RPP,N/A
+03/03/2026,2,M02,DACC_20,0626PM0202,CAM,Màu (Color),M29142,"94,5",92,"2,5","[Nhựa] M43203: 50
+[Màu] M29142: 92",Sai thông số,nhi_nguyen_van@colpal.com,OP nhập sai thông số của màu Hồng qua cho màu Cam do không nhìn từ trên màn hình xuống mà nhìn từ Bảng thông số tham khảo qua nên nhìn nhầm,N/A
+04/03/2026,1,M08,ZZ_25,0636NM0802,N/A,Vật tư 2,M38272,0,25,-25,"[Nhựa] M41908: 75
+[Nhựa] M38272: 25",Sai thông số,tan_huynh_cong@colpal.com,OP quên nhập thông số nhựa M38272->đã cancle và tạo lại nhật ký mới,N/A
+04/03/2026,1,M08,PC_22,0636NM0805,N/A,Vật tư 1,M40443,40,---,-,"[Nhựa] M41908: 40
+[Nhựa] M38272: 60",Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,Bạn OP mới Scan nhầm loại nhựa->đã cancle và tạo lại nhật ký mới,N/A
+06/03/2026,1,M07,SFBK_25,0656NM0706,N/A,Vật tư 1,M40443,34,38,-4,"[Nhựa] M38272: 62
+[Nhựa] M40443: 38",Sai thông số,tan_huynh_cong@colpal.com,OP tạo nhầm tên sản phẩm->KTV  cancle nhưng bấm nhầm approve->đã tạo lại nhật ký mới  ,N/A
+06/03/2026,1,M07,SFBK_25,0656NM0706,N/A,Vật tư 2,M38272,66,62,4,"[Nhựa] M38272: 62
+[Nhựa] M40443: 38",Sai thông số,tan_huynh_cong@colpal.com,OP tạo nhầm tên sản phẩm->KTV  cancle nhưng bấm nhầm approve->đã tạo lại nhật ký mới  ,N/A
+06/03/2026,2,M02,CC_21,0656PM0209,TRANG,Màu (Color),M32083,67,---,-,"[Nhựa] M38272: 88
+[Nhựa] M40443: 59.7
+[Màu] M37998: 55.2",Mã VT lạ (Không có trong Master),nhi_nguyen_van@colpal.com,nhập sai tên sản phẩm,N/A
+06/03/2026,3,M02,TW_23,0656QM0205,DUONG,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,nhập sai máy M06 sang M02,N/A
+06/03/2026,3,M02,TW_23,0656QM0205,DUONG,Màu (Color),M27640,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,nhập sai máy M06 sang M02,N/A
+06/03/2026,3,M02,CP_09,0656QM0208,TRANG,Màu (Color),M37998,"34,2",---,-,"[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,nhập sai mã màu (M19934 thành M37998),N/A
+06/03/2026,3,M06,PRO_22CH,0656QM0608,LA,Màu (Color),M37998,0,---,-,"[Màu] M20048: 0
+[Nhựa] M38272: 0
+[Nhựa] M40443: 0
+[Màu] M36876: 0
+[Nhựa] M40533: 0",Mã VT lạ (Không có trong Master),manh_nguyen_van@colpal.com,nhập sai mã màu (M20048 thành M37998),N/A
+07/03/2026,3,M02,CP_09,0666QM0203,TRANG,Vật tư 1,M43203,88,"86,7","1,3","[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Sai thông số 86.7,manh_nguyen_van@colpal.com,nhập sai thông số dã cancle và tạo lại mẽ khác,N/A
+07/03/2026,3,M02,CP_09,0666QM0203,TRANG,Vật tư 1,M43203,88,"86,7","1,3","[Nhựa] M43203: 86.7
+[Màu] M19934: 34.2
+[Nhựa] : 47.3",Sai thông số,manh_nguyen_van@colpal.com,nhập sai thông số dã cancle và tạo lại mẽ khác,N/A
+09/03/2026,1,M08,SF_24RPP,0686NM0803,N/A,Vật tư 1,M21165,39,61,-22,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Sai thông số,tien_trung_tien@colpal.com,OP mới nhập ngược thông số của 2 phễu,N/A
+09/03/2026,1,M08,SF_24RPP,0686NM0803,N/A,Vật tư 2,M41908,61,39,22,"[Nhựa] M41908: 39
+[Nhựa] M21165: 61",Sai thông số,tien_trung_tien@colpal.com,OP mới nhập ngược thông số của 2 phễu,N/A
+10/03/2026,3,M02,ZZ_25,0696QM0206,DO,Vật tư 1,M27839,"48,5","78,5",-30,"[Nhựa] M27839: 78.5
+[Màu] M41173: 76",Sai thông số,tan_huynh_cong@colpal.com,"OP nhập nhầm thông số nhựa khi tạo record,đã lear tank và tạo lại nhật ký trộn đúng",N/A
+10/03/2026,3,M02,TW_23,0696QM0209,LA,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,"OP trộn trên máy trộn tay nhưng chọn nhầm qua máy trộn M02 dẫn đến báo lỗi mã VT lạ,đã lear tank và tạo lại nhật ký trộn đúng.",N/A
+10/03/2026,3,M02,TW_23,0696QM0209,LA,Màu (Color),M20048,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tan_huynh_cong@colpal.com,"OP trộn trên máy trộn tay nhưng chọn nhầm qua máy trộn M02 dẫn đến báo lỗi mã VT lạ,đã lear tank và tạo lại nhật ký trộn đúng.",N/A
+12/03/2026,1,M02,PRO_22CH,0716NM0201,LA,Vật tư 1,M40443,0,"45,5","-45,5","[Nhựa] M38272: 88
+[Nhựa] M40443: 45.5",Sai thông số,tien_trung_tien@colpal.com,OP mới tạo nhật ký chọn nhầm tên máy -> đã cancle và tạo lại nhật ký đúng,N/A
+12/03/2026,1,M02,PRO_22CH,0716NM0201,LA,Vật tư 2,M38272,0,88,-88,"[Nhựa] M38272: 88
+[Nhựa] M40443: 45.5",Sai thông số,tien_trung_tien@colpal.com,OP mới tạo nhật ký chọn nhầm tên máy -> đã cancle và tạo lại nhật ký đúng,N/A
+12/03/2026,1,M02,PRO_22CH,0716NM0201,LA,Màu (Color),M20048,0,---,-,"[Nhựa] M38272: 88
+[Nhựa] M40443: 45.5",Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,OP mới tạo nhật ký chọn nhầm tên máy -> đã cancle và tạo lại nhật ký đúng,N/A
+12/03/2026,1,M05,TW_25,0716NM0503,N/A,Vật tư 1,M31520,"49,7",---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+12/03/2026,1,M05,TW_25,0716NM0503,N/A,Vật tư 2,M40985,"52,2",---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+12/03/2026,2,M06,PRO_22CH,0716PM0602,LA,Vật tư 1,M38272,66,0,66,"[Màu] M20048: 0
+[Nhựa] M38272: 0
+[Nhựa] M40443: 0
+[Màu] M36876: 0
+[Nhựa] M40533: 0",Sai thông số,manh_nguyen_van@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,2,M06,PRO_22CH,0716PM0602,LA,Vật tư 2,M40443,34,0,34,"[Màu] M20048: 0
+[Nhựa] M38272: 0
+[Nhựa] M40443: 0
+[Màu] M36876: 0
+[Nhựa] M40533: 0",Sai thông số,manh_nguyen_van@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,2,M06,PRO_22CH,0716PM0602,LA,Màu (Color),M20048,4,0,4,"[Màu] M20048: 0
+[Nhựa] M38272: 0
+[Nhựa] M40443: 0
+[Màu] M36876: 0
+[Nhựa] M40533: 0",Sai thông số,manh_nguyen_van@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0602,HONG,Vật tư 1,M33469,75,0,75,"[Nhựa] M33469: 100
+[Màu] M44307: 4
+[Nhựa] M33469: 0
+[Màu] M44307: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0602,HONG,Màu (Color),M44307,75,0,75,"[Nhựa] M33469: 100
+[Màu] M44307: 4
+[Nhựa] M33469: 0
+[Màu] M44307: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0601,LA,Vật tư 1,M33469,75,0,75,"[Nhựa] M33469: 100
+[Màu] M20048: 2
+[Màu] M20048: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0601,LA,Màu (Color),M20048,"1,5",0,"1,5","[Nhựa] M33469: 100
+[Màu] M20048: 2
+[Màu] M20048: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0603,CAM,Vật tư 1,M33469,75,0,75,"[Nhựa] M33469: 100
+[Màu] M29142: 3
+[Màu] M29142: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0603,CAM,Màu (Color),M29142,"2,25",0,"2,25","[Nhựa] M33469: 100
+[Màu] M29142: 3
+[Màu] M29142: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0604,DUONG,Vật tư 1,M33469,75,0,75,"[Nhựa] M33469: 100
+[Màu] M27640: 2
+[Màu] M27640: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+12/03/2026,3,M06,TW_23,0716QM0604,DUONG,Màu (Color),M27640,"1,5",0,"1,5","[Nhựa] M33469: 100
+[Màu] M27640: 2
+[Màu] M27640: 0
+[Nhựa] M33469: 0",Sai thông số,tan_huynh_cong@colpal.com,áp dụng cách nhập mới,N/A
+13/03/2026,1,M06,TW_25,0726NM0603,LA,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+13/03/2026,1,M06,TW_25,0726NM0603,LA,Màu (Color),M20048,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A
+13/03/2026,1,M06,TW_25,0726NM0602,DUONG,Vật tư 1,M33469,0,---,-,Không có Master Data cho dòng máy/SP này,Mã VT lạ (Không có trong Master),tien_trung_tien@colpal.com,Trộn PQ bundle mới,N/A

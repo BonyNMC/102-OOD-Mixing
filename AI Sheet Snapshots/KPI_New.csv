@@ -1,0 +1,200 @@
+Ngày,Ca,Máy,Nhóm,Người thực hiện,Tình trạng máy,Trạng thái,Phê duyệt
+2026-05-13,Ca 1,M07,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M07,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M07,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,M02,B,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M02,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M02,A,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,M03,B,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M03,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M03,A,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,M05,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M05,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M05,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,M06,B,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M06,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M06,A,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,N01,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,N01,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,N01,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,N02,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,N02,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,N02,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,N03,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,N03,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,N03,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,N04,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,N04,C,minh_van_minh@colpal.com,Không có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,N04,A,khanh_thanh_khanh@colpal.com,Không có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,NC,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,NC,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,NC,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,CDC1,B,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,CDC1,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,CDC1,A,dang_tran_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,CDC2,B,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,CDC2,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,CDC2,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,TAWI_AB1,B,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,TAWI_AB1,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,TAWI_AB1,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,TAWI_AB2,B,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,TAWI_AB2,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,TAWI_AB2,A,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,TAWI_AB3,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,TAWI_AB3,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,TAWI_AB3,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,TAWI_AB4,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,TAWI_AB4,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,TAWI_AB4,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,XNJB,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,XNJB,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,XNJB,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 1,M08,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 2,M08,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-13,Ca 3,M08,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M07,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M07,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M07,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M02,B,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M02,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M02,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M03,B,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M03,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M03,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M05,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M05,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M05,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M06,B,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M06,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M06,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,N01,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,N01,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,N01,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,N02,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,N02,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,N02,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,N03,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,N03,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,N03,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,N04,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,N04,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,N04,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,NC,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,NC,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,NC,A,khanh_thanh_khanh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,CDC1,B,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,CDC1,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,CDC1,-,-,-,Chưa hoàn thành,-
+2026-05-12,Ca 1,CDC2,B,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,CDC2,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,CDC2,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,TAWI_AB1,B,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,TAWI_AB1,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,TAWI_AB1,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,TAWI_AB2,B,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,TAWI_AB2,C,vu_nguyen_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,TAWI_AB2,A,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,TAWI_AB3,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,TAWI_AB3,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,TAWI_AB3,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,TAWI_AB4,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,TAWI_AB4,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,TAWI_AB4,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,XNJB,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,XNJB,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,XNJB,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 1,M08,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 2,M08,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-12,Ca 3,M08,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M07,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M07,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M07,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M02,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M02,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M02,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M03,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M03,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M03,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M05,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M05,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M05,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M06,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M06,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M06,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,N01,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,N01,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,N01,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,N02,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,N02,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,N02,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,N03,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,N03,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,N03,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,N04,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,N04,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,N04,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,NC,B,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,NC,C,minh_van_minh@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,NC,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,CDC1,C,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,CDC1,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,CDC1,C,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,CDC2,C,manh_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,CDC2,C,tien_trung_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,CDC2,A,bon_van_tien@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,TAWI_AB1,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,TAWI_AB1,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,TAWI_AB1,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,TAWI_AB2,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,TAWI_AB2,B,bin_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,TAWI_AB2,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,TAWI_AB3,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,TAWI_AB3,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,TAWI_AB3,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,TAWI_AB4,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,TAWI_AB4,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,TAWI_AB4,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,XNJB,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,XNJB,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,XNJB,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 1,M08,B,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 2,M08,C,nhieu_nguyen_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-11,Ca 3,M08,A,vinh_hoang_van@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 1,M07,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 2,M07,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 3,M07,C,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 1,M02,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 2,M02,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 3,M02,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,M03,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 2,M03,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 3,M03,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,M05,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 2,M05,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 3,M05,C,cuong_nguyen_quoc@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 1,M06,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 2,M06,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt
+2026-05-10,Ca 3,M06,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,N01,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,N01,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,N01,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,N02,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,N02,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,N02,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,N03,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,N03,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,N03,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,N04,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,N04,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,N04,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,NC,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,NC,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,NC,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,CDC1,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,CDC1,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,CDC1,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,CDC2,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 2,CDC2,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 3,CDC2,-,-,-,Chưa hoàn thành,-
+2026-05-10,Ca 1,TAWI_AB1,A,tan_huynh_cong@colpal.com,Có kế hoạch,Hoàn thành,Đã duyệt

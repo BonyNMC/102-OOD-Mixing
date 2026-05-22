@@ -1,0 +1,13 @@
+# Clasp credentials
+.clasprc.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Google Drive shortcuts
+*.gsheet
+*.gdoc
+*.gslides
+*.gdraw
+

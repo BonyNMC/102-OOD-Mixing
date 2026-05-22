@@ -1,0 +1,68 @@
+{
+  "spreadsheetName": "Control Room - Mixing",
+  "spreadsheetId": "1xc64iPueGzUayTzk_UKfpDf03Xg8Rk0FzXgF6PUVvn0",
+  "generatedAt": "2026-05-22 09:41:24",
+  "maxRowsPerSheet": 200,
+  "sheets": [
+    {
+      "name": "Readme",
+      "rows": 48,
+      "columns": 3
+    },
+    {
+      "name": "CR_History_Snapshot",
+      "rows": 324,
+      "columns": 8
+    },
+    {
+      "name": "DEBUG_FILE_OUTPUT",
+      "rows": 44,
+      "columns": 1
+    },
+    {
+      "name": "SETUP_NEW",
+      "rows": 12,
+      "columns": 21
+    },
+    {
+      "name": "History_Error_Mixing_none_Match_Data",
+      "rows": 1037,
+      "columns": 16
+    },
+    {
+      "name": "MAKT_NAME",
+      "rows": 1101,
+      "columns": 10
+    },
+    {
+      "name": "DATA_MixingTransaction",
+      "rows": 386,
+      "columns": 46
+    },
+    {
+      "name": "DATA_Changeover-Mixing",
+      "rows": 179,
+      "columns": 59
+    },
+    {
+      "name": "Master_data",
+      "rows": 19,
+      "columns": 6
+    },
+    {
+      "name": "KPI_New(OLD)",
+      "rows": 18523,
+      "columns": 7
+    },
+    {
+      "name": "DATA",
+      "rows": 283,
+      "columns": 39
+    },
+    {
+      "name": "DEBUG_LOG",
+      "rows": 282,
+      "columns": 13
+    }
+  ]
+}

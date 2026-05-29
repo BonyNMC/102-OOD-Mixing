@@ -658,12 +658,10 @@ function _normalizeShiftLabel(value) {
 }
 
 function _getOperationalTimestamp(value, jobId) {
-  var parsed = _parseFlexDate(value);
   var objectIdDate = _dateFromObjectId(jobId);
-  if (!parsed) return objectIdDate;
+  if (objectIdDate) return objectIdDate;
 
-  var isDateOnly = parsed.getHours() === 0 && parsed.getMinutes() === 0 && parsed.getSeconds() === 0;
-  if (isDateOnly && objectIdDate) return objectIdDate;
+  var parsed = _parseFlexDate(value);
   return parsed;
 }
 

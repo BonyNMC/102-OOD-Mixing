@@ -809,8 +809,8 @@ function triggerControlRoom() {
 // =========================================================================
 
 var _SNAPSHOT_HEADERS = [
-  "Timestamp", "Ngày", "Ca", "Panel", "Máy", "Trạng thái",
-  "Chi tiết", "Người chịu trách nhiệm"
+  "timestamp", "shift_date", "shift", "panel", "machine", "status",
+  "details", "responsible_person"
 ];
 
 /**
@@ -835,6 +835,7 @@ function _writeSnapshot() {
   var shiftInfo = _getCurrentShiftCR();
   var tz = CR_CONFIG.TIME_ZONE;
   var now = Utilities.formatDate(new Date(), tz, "yyyy-MM-dd HH:mm:ss");
+  var targetShiftDWH = _translateShift(shiftInfo.shift);
 
   // Đọc dữ liệu lịch sử hiện có
   var lastRow = sheet.getLastRow();
@@ -860,7 +861,7 @@ function _writeSnapshot() {
     }
     
     var rowShift = row[2] ? row[2].toString().trim() : "";
-    var isCurrentShift = (rowDateStr === shiftInfo.date && rowShift === shiftInfo.shift);
+    var isCurrentShift = (rowDateStr === shiftInfo.date && rowShift === targetShiftDWH);
     return !isCurrentShift; // Giữ lại các dòng KHÔNG phải ca hiện tại
   });
 
@@ -872,9 +873,13 @@ function _writeSnapshot() {
   if (payload.checklist) {
     payload.checklist.forEach(function (item) {
       newRows.push([
-        now, shiftInfo.date, shiftInfo.shift, "Checklist",
-        item.machine, item.status,
-        item.status === "Hoàn thành" ? ("Duyệt: " + item.approval) : "-",
+        now,
+        shiftInfo.date,
+        _translateShift(shiftInfo.shift),
+        "Checklist",
+        item.machine,
+        _translateChecklistStatus(item.status),
+        _translateChecklistDetails(item.status === "Hoàn thành" ? ("Duyệt: " + item.approval) : "-"),
         item.operator || "-"
       ]);
     });
@@ -884,9 +889,13 @@ function _writeSnapshot() {
   if (payload.changeover && payload.changeover.required) {
     payload.changeover.required.forEach(function (r) {
       newRows.push([
-        now, shiftInfo.date, shiftInfo.shift, "Changeover",
-        r.machine, r.status,
-        r.oldProduct + " → " + r.newProduct + " | " + r.oldColor + " → " + r.newColor,
+        now,
+        shiftInfo.date,
+        _translateShift(shiftInfo.shift),
+        "Changeover",
+        r.machine,
+        _translateChangeoverStatus(r.status),
+        _translateChangeoverDetails(r.oldProduct + " -> " + r.newProduct + " | " + r.oldColor + " -> " + r.newColor),
         r.responsiblePerson || "-"
       ]);
     });
@@ -896,9 +905,13 @@ function _writeSnapshot() {
   if (payload.errors) {
     payload.errors.forEach(function (e) {
       newRows.push([
-        now, shiftInfo.date, shiftInfo.shift, "Error",
-        e.machine, e.remedyStatus || "Chưa khắc phục",
-        e.errorLocation + " — " + e.errorNote + " | " + e.product + " / " + e.batch,
+        now,
+        shiftInfo.date,
+        _translateShift(shiftInfo.shift),
+        "Error",
+        e.machine,
+        _translateErrorStatus(e.remedyStatus),
+        e.errorLocation + " - " + e.errorNote + " | " + e.product + " / " + e.batch,
         e.operator || "-"
       ]);
     });
@@ -915,6 +928,125 @@ function _writeSnapshot() {
   sheet.getRange(1, 1, 1, _SNAPSHOT_HEADERS.length)
     .setBackground("#1a237e").setFontColor("#ffffff").setFontWeight("bold");
   sheet.setFrozenRows(1);
+}
+
+// =========================================================================
+// 9B. SNAPSHOT TRANSLATION UTILITIES (DWH STANDARD)
+// =========================================================================
+
+function _translateShift(shiftVal) {
+  var s = (shiftVal || "").toString().trim();
+  if (s === "Ca 1" || s === "1" || s === "Shift 1") return "Shift 1";
+  if (s === "Ca 2" || s === "2" || s === "Shift 2") return "Shift 2";
+  if (s === "Ca 3" || s === "3" || s === "Shift 3") return "Shift 3";
+  return s;
+}
+
+function _translateChecklistStatus(statusVal) {
+  var s = (statusVal || "").toString().trim();
+  if (s === "Hoàn thành" || s === "Completed") return "Completed";
+  if (s === "Đang thực hiện" || s === "In Progress") return "In Progress";
+  if (s === "Chưa hoàn thành" || s === "Not Started") return "Not Started";
+  return s;
+}
+
+function _translateChecklistDetails(detailVal) {
+  var d = (detailVal || "").toString().trim();
+  if (d === "Duyệt: Đã duyệt" || d === "Duyệt: Approved" || d === "Approval: Approved") return "Approval: Approved";
+  if (d === "Duyệt: Chưa duyệt" || d === "Duyệt: Pending" || d === "Approval: Pending") return "Approval: Pending";
+  return d;
+}
+
+function _translateChangeoverStatus(statusVal) {
+  var s = (statusVal || "").toString().trim().replace(/[\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD00-\uDFFF]/g, '').trim();
+  if (s === "Thiếu" || s === "Missing") return "Missing";
+  if (s === "Đã thực hiện" || s === "Completed") return "Completed";
+  if (s === "Chờ duyệt" || s === "Pending Approval") return "Pending Approval";
+  if (s === "Đang thực hiện" || s === "In Progress") return "In Progress";
+  return s;
+}
+
+function _translateChangeoverDetails(detailVal) {
+  return (detailVal || "").toString().replace(/→/g, "->").trim();
+}
+
+function _translateErrorStatus(statusVal) {
+  var s = (statusVal || "").toString().trim();
+  if (s === "Đã khắc phục" || s === "Resolved") return "Resolved";
+  if (s === "Chưa khắc phục" || s === "Unresolved") return "Unresolved";
+  return s;
+}
+
+/**
+ * One-time migration function to translate all historical snapshot records to English
+ * and apply Data Warehouse naming conventions. Run this from the Apps Script Editor once.
+ */
+function migrateSnapshotSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheetName = CR_CONFIG.SNAPSHOT.sheetName;
+  var sheet = ss.getSheetByName(sheetName);
+  if (!sheet) {
+    Logger.log("Sheet '" + sheetName + "' not found.");
+    return;
+  }
+
+  var lastRow = sheet.getLastRow();
+  if (lastRow < 2) {
+    Logger.log("No historical data to migrate.");
+    return;
+  }
+
+  var range = sheet.getRange(1, 1, lastRow, _SNAPSHOT_HEADERS.length);
+  var values = range.getValues();
+
+  // 1. Update headers
+  values[0] = _SNAPSHOT_HEADERS;
+
+  // 2. Translate all rows
+  for (var i = 1; i < values.length; i++) {
+    var row = values[i];
+    
+    // Format timestamp
+    if (row[0] instanceof Date) {
+      row[0] = Utilities.formatDate(row[0], CR_CONFIG.TIME_ZONE, "yyyy-MM-dd HH:mm:ss");
+    } else if (row[0]) {
+      row[0] = row[0].toString().trim();
+    }
+    
+    // Format date
+    if (row[1] instanceof Date) {
+      row[1] = Utilities.formatDate(row[1], CR_CONFIG.TIME_ZONE, "yyyy-MM-dd");
+    } else if (row[1]) {
+      row[1] = row[1].toString().trim();
+    }
+
+    // Translate shift
+    row[2] = _translateShift(row[2]);
+
+    // Translate panel
+    var panel = (row[3] || "").toString().trim();
+    if (panel === "Checklist") {
+      row[5] = _translateChecklistStatus(row[5]);
+      row[6] = _translateChecklistDetails(row[6]);
+    } else if (panel === "Changeover") {
+      row[5] = _translateChangeoverStatus(row[5]);
+      row[6] = _translateChangeoverDetails(row[6]);
+    } else if (panel === "Error") {
+      row[5] = _translateErrorStatus(row[5]);
+      row[6] = (row[6] || "").toString().replace(/—/g, "-").replace(/→/g, "->").trim();
+    }
+  }
+
+  // 3. Clear and write back
+  sheet.clearContents();
+  sheet.getRange(1, 1, values.length, _SNAPSHOT_HEADERS.length).setValues(values);
+  
+  // Set formatting
+  sheet.getRange(1, 1, 1, _SNAPSHOT_HEADERS.length)
+    .setBackground("#1a237e").setFontColor("#ffffff").setFontWeight("bold");
+  sheet.setFrozenRows(1);
+
+  Logger.log("Migration to English DWH standard completed successfully for " + (values.length - 1) + " rows.");
 }
 
 // =========================================================================

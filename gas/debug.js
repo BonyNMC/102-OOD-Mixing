@@ -93,3 +93,54 @@ function saveTextFile(text) {
     Logger.log("Could not write file to Drive: " + driveErr.message);
   }
 }
+
+function runDiagnosticErrors() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var errSheet = ss.getSheetByName("History_Error_Mixing_none_Match_Data");
+  if (!errSheet) {
+    saveTextFile("Error: Sheet 'History_Error_Mixing_none_Match_Data' not found");
+    return;
+  }
+
+  var data = errSheet.getDataRange().getValues();
+  var header = data.shift();
+  var output = [];
+  output.push("Total rows in History_Error_Mixing_none_Match_Data: " + (data.length + 1));
+  output.push("Spreadsheet Timezone: " + ss.getSpreadsheetTimeZone());
+  output.push("Current Time: " + Utilities.formatDate(new Date(), "Asia/Ho_Chi_Minh", "yyyy-MM-dd HH:mm:ss"));
+  
+  // Find column indices
+  var colIdx = _buildColumnIndex(header, [
+    "Ngày", "Ca", "Máy", "Sản phẩm", "Batch", "Màu Y/C",
+    "Vị trí lỗi", "Ghi chú Lỗi", "Người nhập", "Nguyên nhân", "Trạng thái khắc phục"
+  ]);
+
+  if (colIdx["Ngày"] === -1) {
+    colIdx["Ngày"] = 0;
+  }
+
+  var lastRows = data.slice(-10); // get last 10 rows
+  output.push("\n--- LAST 10 ROWS IN SHEET ---");
+  
+  var targetDate = "2026-06-02";
+  var targetShiftNum = "1"; // Ca 1
+
+  lastRows.forEach(function(row, idx) {
+    var rawDate = row[colIdx["Ngày"]];
+    var rawCa = row[colIdx["Ca"]];
+    
+    var parsedDate = _safeDateStr(rawDate);
+    var parsedShiftNum = _shiftLabelToNumber(rawCa ? rawCa.toString().trim() : "");
+    
+    var matchDate = (parsedDate === targetDate);
+    var matchShift = (parsedShiftNum === targetShiftNum);
+    var status = (row[colIdx["Trạng thái khắc phục"]] || "").toString().trim();
+    
+    output.push("Row " + (data.length - 10 + idx + 2) + ":");
+    output.push("  Raw: Ngày=" + (rawDate ? rawDate.toString() : "null") + " (Type: " + (typeof rawDate) + "), Ca=" + rawCa);
+    output.push("  Parsed: Ngày=" + parsedDate + " (Match target? " + matchDate + "), Ca=" + parsedShiftNum + " (Match target? " + matchShift + ")");
+    output.push("  Machine=" + row[colIdx["Máy"]] + ", Batch=" + row[colIdx["Batch"]] + ", Status=" + status);
+  });
+
+  saveTextFile(output.join("\n"));
+}

@@ -502,6 +502,11 @@ function _getErrorAlerts(ss, date, shift) {
     "Vị trí lỗi", "Ghi chú Lỗi", "Người nhập", "Nguyên nhân", "Trạng thái khắc phục"
   ]);
 
+  // Fallback nếu cột Ngày bị trống tiêu đề hoặc không tìm thấy
+  if (colIdx["Ngày"] === -1) {
+    colIdx["Ngày"] = 0;
+  }
+
   // Ca trong History_Error dùng số "1", "2", "3"
   var shiftNumber = _shiftLabelToNumber(shift);
   var results = [];

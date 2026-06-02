@@ -1,4 +1,4 @@
-Ngày,Ca,Máy,Sản phẩm,Batch,Màu Y/C,Vị trí lỗi,Mã Thực Tế,TS Thực,TS Chuẩn (Master),Độ lệch,BOM Chuẩn (Gợi ý),Ghi chú Lỗi,Người nhập,Nguyên nhân,Trạng thái khắc phục
+,Ca,Máy,Sản phẩm,Batch,Màu Y/C,Vị trí lỗi,Mã Thực Tế,TS Thực,TS Chuẩn (Master),Độ lệch,BOM Chuẩn (Gợi ý),Ghi chú Lỗi,Người nhập,Nguyên nhân,Trạng thái khắc phục
 07/01/2026,1,M02,K5+,0076NM0202,HONG,Vật tư 1,M43203,"86,5","86,7","-0,2","[Nhựa] M43203: 86.7
 [Màu] M33394: 57.5
 [] : 38",Sai thông số,dat_nguyen_chi@colpal.com,OP trộn có đọc BOM khi trộn nhưng không lấy số nhập từ máy trộn để nhập vào nhật ký trộn mà nhớ ( mở 2 tab bật qua bật lại sẽ quên),N/A

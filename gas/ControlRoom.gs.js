@@ -1110,9 +1110,10 @@ function runDiagnostic() {
  */
 function runManualArchive() {
   var ui = SpreadsheetApp.getUi();
+  var currentYear = new Date().getFullYear();
   var response = ui.alert(
     "Lưu trữ dữ liệu cũ (Archive)",
-    "Hành động này sẽ tự động di chuyển toàn bộ dữ liệu thô cũ hơn 30 ngày từ 5 sheet chính sang tệp tin lưu trữ 'Mixing_Data_Archive' tại thư mục Drive được chỉ định để tối ưu hóa hiệu năng.\n\nBạn có chắc chắn muốn tiếp tục?",
+    "Hành động này sẽ tự động di chuyển toàn bộ dữ liệu thô cũ hơn 30 ngày từ 5 sheet chính sang tệp tin lưu trữ 'Mixing_Data_Archive_" + currentYear + "' tại thư mục Drive được chỉ định để tối ưu hóa hiệu năng.\n\nBạn có chắc chắn muốn tiếp tục?",
     ui.ButtonSet.YES_NO
   );
   
@@ -1121,7 +1122,7 @@ function runManualArchive() {
     try {
       triggerAutoArchive();
       SpreadsheetApp.getActiveSpreadsheet().toast("Lưu trữ dữ liệu thành công!", "Auto-Archive", 8);
-      ui.alert("Thành công", "Đã di chuyển toàn bộ dữ liệu cũ hơn 30 ngày vào tệp 'Mixing_Data_Archive' thành công!", ui.ButtonSet.OK);
+      ui.alert("Thành công", "Đã di chuyển toàn bộ dữ liệu cũ hơn 30 ngày vào tệp 'Mixing_Data_Archive_" + currentYear + "' thành công!", ui.ButtonSet.OK);
     } catch (e) {
       Logger.log("Archiving failed: " + e.toString());
       SpreadsheetApp.getActiveSpreadsheet().toast("Quá trình lưu trữ thất bại!", "Auto-Archive", 8);
@@ -1136,7 +1137,8 @@ function runManualArchive() {
  */
 function triggerAutoArchive() {
   var folderId = "1i_FA0pNDasWPt0l9TK3uA7fZBHLPz1DS";
-  var archiveName = "Mixing_Data_Archive";
+  var currentYear = new Date().getFullYear();
+  var archiveName = "Mixing_Data_Archive_" + currentYear;
   var retentionDays = 30;
   
   var folder = DriveApp.getFolderById(folderId);

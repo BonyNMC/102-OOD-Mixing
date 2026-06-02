@@ -808,6 +808,12 @@ function createReadmeSheet() {
     ['DWH Snapshot (Lịch sử Domo)', 'Ghi lại trạng thái Checklist, Changeover và Errors của mỗi ca trực vào sheet CR_History_Snapshot.', 'Tự động dịch sang tiếng Anh, xóa Emojis, dùng chuẩn snake_case chuẩn hóa dữ liệu cho Domo.'],
     ['Công cụ di dân (Migration Tool)', 'Hàm migrateSnapshotSheet() dùng để chuẩn hóa và dịch toàn bộ dữ liệu lịch sử cũ sang tiếng Anh.', 'Chạy thủ công một lần từ Apps Script Editor.'],
     ['', '', ''],
+    ['NGUYÊN TẮC HOẠT ĐỘNG & LOGIC CHÍNH', 'Chi tiết cách tính toán và tần suất', 'Thông tin kỹ thuật chuyên sâu'],
+    ['1. Tần suất cập nhật (Frequency)', '1. Đồng bộ dữ liệu thô: Hàm update() chạy qua Triggers tự động của Google Apps Script (thiết lập chạy mỗi 30 phút hoặc 1 tiếng) để kéo dữ liệu mới từ Domo/Augmentir.\n2. Cập nhật Dashboard: Giao diện Web App có bộ đếm tự động làm mới mỗi 5 phút. Dữ liệu phía backend được lưu đệm (Cache) trong 180 giây (3 phút) để tối ưu hiệu năng. Bấm "⟳ Ca hiện tại" để ép buộc tải lại dữ liệu mới nhất tức thì.', 'Có thể chạy thủ công qua Menu Augmentir > Update.'],
+    ['2. Logic Machine Checklist', '1. Danh sách máy mục tiêu: Lấy từ cột A của sheet "Master_data" (18 máy).\n2. Xác định ca/ngày làm việc: Đọc cột "jobId" và trích xuất timestamp gốc của MongoDB, chuyển đổi sang giờ Việt Nam (GMT+7) để xác định chính xác ngày và ca của dòng dữ liệu (bỏ qua lệch múi giờ America/Los_Angeles).\n3. Trạng thái hiển thị: Khớp mẻ mới nhất của từng máy trong ca mục tiêu:\n- Trạng thái hoàn thành (completed) -> "Completed".\n- Trạng thái đang làm (created/in-progress/paused) -> "In Progress".\n- Không có dữ liệu -> "Not Started".', 'Đảm bảo không bỏ sót mẻ trộn nào của ca sáng.'],
+    ['3. Logic Changeover Compliance', '1. Phát hiện sự đổi mẻ: Đọc toàn bộ lịch sử trộn của từng máy trong "DATA_MixingTransaction". Sắp xếp theo thời gian tăng dần và đối chiếu cặp giao dịch liên ca.\n2. Cảnh báo Changeover đầu ca/trong ca: Nếu giao dịch sau nằm trong ca mục tiêu và có sự thay đổi ít nhất 1 trong 3 thông số: Mã nhựa 1, Mã nhựa 2, hoặc Mã màu (khác rỗng và khác N/A) -> Kích hoạt yêu cầu làm Changeover.\n3. Khớp nối: Đối chiếu với các phiếu đã làm trong "DATA_Changeover-Mixing" theo Máy + Sản phẩm cũ -> Sản phẩm mới (hoặc Màu cũ -> Màu mới) để hiển thị trạng thái tương ứng (Đã thực hiện, Chờ duyệt, Đang thực hiện, hoặc Thiếu).', 'Hỗ trợ so sánh liên ca (Cross-shift) hoàn hảo.'],
+    ['4. Logic Error Alerts', '1. Nguồn dữ liệu: Quét sheet "History_Error_Mixing_none_Match_Data".\n2. Bộ lọc: Lấy tất cả các lỗi xảy ra trùng Ngày và Ca mục tiêu.\n3. Phân loại hiển thị: Hiển thị danh sách các lỗi có Trạng thái khắc phục là "Chưa khắc phục" hoặc trống để cảnh báo đỏ lên Dashboard và hệ thống Google Chat.', 'Lỗi đã khắc phục sẽ tự động ẩn khỏi danh sách cảnh báo chủ đạo.'],
+    ['', '', ''],
     ['Platform: Augmentir', 'Lấy danh sách jobs từ API Augmentir.', 'Ghi vào sheet DATA theo mốc incremental dựa trên updatedAt.'],
     ['Platform: DOMO', 'Đồng bộ giao dịch sản xuất từ DOMO Dataset API.', 'Ghi theo upsert mode bằng cột Id để giữ nguyên lịch sử giao dịch.'],
     ['Platform: GOOGLE SHEET', 'Copy dữ liệu trực tiếp từ các file Spreadsheet dùng chung khác.', 'Clear sheet đích và chép đè dữ liệu đã lọc theo ngày.'],
@@ -824,6 +830,18 @@ function createReadmeSheet() {
     .setFontWeight('bold');
   readmeSheet.getRange(8, 1, 1, 3)
     .setBackground('#4caf50')
+    .setFontColor('white')
+    .setFontWeight('bold');
+  readmeSheet.getRange(24, 1, 1, 3)
+    .setBackground('#1a237e')
+    .setFontColor('white')
+    .setFontWeight('bold');
+  readmeSheet.getRange(30, 1, 1, 3)
+    .setBackground('#2e7d32')
+    .setFontColor('white')
+    .setFontWeight('bold');
+  readmeSheet.getRange(36, 1, 1, 3)
+    .setBackground('#0288d1')
     .setFontColor('white')
     .setFontWeight('bold');
   readmeSheet.getRange(1, 1, rows.length, 3).setWrap(true).setVerticalAlignment('top');

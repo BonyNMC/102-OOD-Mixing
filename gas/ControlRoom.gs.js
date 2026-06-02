@@ -543,6 +543,7 @@ function _getErrorAlerts(ss, date, shift) {
 
 function _getUnapprovedTransactions(ss, date, shift) {
   var unapproved = [];
+  var targetShift = _normalizeShiftLabel(shift);
 
   // 1. DATA_MixingTransaction
   var mixingSheet = ss.getSheetByName("DATA_MixingTransaction");
@@ -553,8 +554,6 @@ function _getUnapprovedTransactions(ss, date, shift) {
       "MixingMachine", "ProductName", "MixingBatch", "State", "Importer", "DayShift", "Shift"
     ]);
 
-    var shiftNum = _shiftLabelToNumber(shift);
-
     mixingData.forEach(function (row) {
       var state = (row[mixingIdx["State"]] || "").toString().trim();
       var stateUpper = state.toUpperCase();
@@ -562,9 +561,9 @@ function _getUnapprovedTransactions(ss, date, shift) {
       if (stateUpper === "APPROVED" || stateUpper === "CANCELED" || stateUpper === "") return;
 
       var dayShift = _safeDateStr(row[mixingIdx["DayShift"]]);
-      var rowShift = (row[mixingIdx["Shift"]] || "").toString().trim();
+      var rowShift = _normalizeShiftLabel(row[mixingIdx["Shift"]]);
 
-      if (dayShift === date && rowShift === shiftNum) {
+      if (dayShift === date && rowShift === targetShift) {
         unapproved.push({
           type: "Mixing",
           machine: (row[mixingIdx["MixingMachine"]] || "").toString().trim(),

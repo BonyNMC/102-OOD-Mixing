@@ -322,11 +322,11 @@ function getCurrentShift() {
   var dateStr = Utilities.formatDate(now, timeZone, "yyyy-MM-dd");
   var shift = "Ca 3";
 
-  if (timeStr >= '05:55:00' && timeStr <= '13:54:59') shift = 'Ca 1';
-  else if (timeStr >= '13:55:00' && timeStr <= '21:54:59') shift = 'Ca 2';
+  if (timeStr >= '06:00:00' && timeStr <= '13:59:59') shift = 'Ca 1';
+  else if (timeStr >= '14:00:00' && timeStr <= '21:59:59') shift = 'Ca 2';
   else {
     shift = 'Ca 3';
-    if (timeStr <= '05:54:59') {
+    if (timeStr <= '05:59:59') {
       var prevDate = new Date(now.getTime() - 24 * 3600000);
       dateStr = Utilities.formatDate(prevDate, timeZone, "yyyy-MM-dd");
     }
@@ -388,11 +388,11 @@ function getShiftInfoFromTimestamp(timestamp, timeZone) {
   var dateStr = Utilities.formatDate(timestamp, timeZone, "yyyy-MM-dd");
   var shift = "Ca 3";
 
-  if (timeStr >= '05:55:00' && timeStr <= '13:54:59') {
+  if (timeStr >= '06:00:00' && timeStr <= '13:59:59') {
     shift = 'Ca 1';
-  } else if (timeStr >= '13:55:00' && timeStr <= '21:54:59') {
+  } else if (timeStr >= '14:00:00' && timeStr <= '21:59:59') {
     shift = 'Ca 2';
-  } else if (timeStr <= '05:54:59') {
+  } else if (timeStr <= '05:59:59') {
     var prevDate = new Date(timestamp.getTime() - 24 * 3600000);
     dateStr = Utilities.formatDate(prevDate, timeZone, "yyyy-MM-dd");
   }

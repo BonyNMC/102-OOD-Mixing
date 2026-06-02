@@ -17,9 +17,9 @@ const CR_CONFIG = {
 
   // Quy tắc Ca — giống Update KPI (cHÍNH).js
   SHIFTS: {
-    "Ca 1": { start: "05:55:00", end: "13:54:59", label: "Ca 1", number: "1" },
-    "Ca 2": { start: "13:55:00", end: "21:54:59", label: "Ca 2", number: "2" },
-    "Ca 3": { start: "21:55:00", end: "05:54:59", label: "Ca 3", number: "3" },
+    "Ca 1": { start: "06:00:00", end: "13:59:59", label: "Ca 1", number: "1" },
+    "Ca 2": { start: "14:00:00", end: "21:59:59", label: "Ca 2", number: "2" },
+    "Ca 3": { start: "22:00:00", end: "05:59:59", label: "Ca 3", number: "3" },
   },
 
   // Panel 1: Machine Checklist
@@ -343,13 +343,12 @@ function _getChangeoverCompliance(ss, date, shift) {
     byMachine[tx.machine].push(tx);
   });
 
-  // Helper check xem code nguyên vật liệu có thay đổi thật sự không
-  function isCodeChanged(cVal, nVal) {
+  // Helper check xem ProductName hoặc Color có thay đổi thực sự không (chỉ bỏ qua rỗng)
+  function isFieldChanged(cVal, nVal) {
     var cv = (cVal || "").toString().trim().toUpperCase();
     var nv = (nVal || "").toString().trim().toUpperCase();
     
     if (cv === nv) return false;
-    if (cv === "N/A" || nv === "N/A") return false;
     if (cv === "" || nv === "") return false;
     
     return true;
@@ -373,12 +372,11 @@ function _getChangeoverCompliance(ss, date, shift) {
       // Chỉ bắt những sự chuyển đổi xảy ra TẠI ca hiện tại
       // Nghĩa là: giao dịch gây ra thay đổi (next) thuộc về ca hiện tại
       if (next.dayShift === date && next.shiftNum === shiftNumber) {
-        var matChanged = isCodeChanged(curr.materialCode, next.materialCode);
-        var mat2Changed = isCodeChanged(curr.materialCode2, next.materialCode2);
-        var colorCodeChanged = isCodeChanged(curr.colorCode, next.colorCode);
+        var prodChanged = isFieldChanged(curr.product, next.product);
+        var colorChanged = isFieldChanged(curr.color, next.color);
 
-        // Chỉ trigger changeover khi có ít nhất 1 trong 3 mã thay đổi thực sự (và không liên quan N/A)
-        if (matChanged || mat2Changed || colorCodeChanged) {
+        // Trigger changeover khi có sự thay đổi 1 trong 2 trường ProductName hoặc Color
+        if (prodChanged || colorChanged) {
           requiredChangeovers.push({
             machine: machine,
             oldProduct: curr.product,
@@ -432,13 +430,25 @@ function _getChangeoverCompliance(ss, date, shift) {
 
   // --- Bước 4: Match changeover required với changeover thực tế ---
   requiredChangeovers.forEach(function (req) {
+    // Stage 1: Exact match (Machine + Old Product + New Product + Old Color + New Color)
     var matched = changeoverRecords.find(function (co) {
       return co.machine === req.machine
         && co.oldBundle === req.oldProduct
-        && co.newBundle === req.newProduct;
+        && co.newBundle === req.newProduct
+        && co.oldColor === req.oldColor
+        && co.newColor === req.newColor;
     });
 
-    // Nếu không match theo Bundle, thử match theo Bundle + Color
+    // Stage 2: Product-only match (Machine + Old Product + New Product)
+    if (!matched) {
+      matched = changeoverRecords.find(function (co) {
+        return co.machine === req.machine
+          && co.oldBundle === req.oldProduct
+          && co.newBundle === req.newProduct;
+      });
+    }
+
+    // Stage 3: Pure color-only match (Machine + Old Color + New Color + Old Product)
     if (!matched) {
       matched = changeoverRecords.find(function (co) {
         return co.machine === req.machine
@@ -579,13 +589,13 @@ function _getCurrentShiftCR() {
   var dateStr = Utilities.formatDate(now, tz, "yyyy-MM-dd");
   var shift = "Ca 3";
 
-  if (timeStr >= "05:55:00" && timeStr <= "13:54:59") {
+  if (timeStr >= "06:00:00" && timeStr <= "13:59:59") {
     shift = "Ca 1";
-  } else if (timeStr >= "13:55:00" && timeStr <= "21:54:59") {
+  } else if (timeStr >= "14:00:00" && timeStr <= "21:59:59") {
     shift = "Ca 2";
   } else {
     shift = "Ca 3";
-    if (timeStr <= "05:54:59") {
+    if (timeStr <= "05:59:59") {
       var prevDate = new Date(now.getTime() - 24 * 3600000);
       dateStr = Utilities.formatDate(prevDate, tz, "yyyy-MM-dd");
     }
@@ -679,11 +689,11 @@ function _getShiftInfoFromTimestamp(timestamp) {
   var dateStr = Utilities.formatDate(timestamp, tz, "yyyy-MM-dd");
   var shift = "Ca 3";
 
-  if (timeStr >= "05:55:00" && timeStr <= "13:54:59") {
+  if (timeStr >= "06:00:00" && timeStr <= "13:59:59") {
     shift = "Ca 1";
-  } else if (timeStr >= "13:55:00" && timeStr <= "21:54:59") {
+  } else if (timeStr >= "14:00:00" && timeStr <= "21:59:59") {
     shift = "Ca 2";
-  } else if (timeStr <= "05:54:59") {
+  } else if (timeStr <= "05:59:59") {
     var prevDate = new Date(timestamp.getTime() - 24 * 3600000);
     dateStr = Utilities.formatDate(prevDate, tz, "yyyy-MM-dd");
   }

@@ -73,6 +73,7 @@ function onOpen() {
     .addItem('Create SETUP_NEW', 'setupMultiProcedureTable')
     .addItem('Create README', 'createReadmeSheet')
     .addItem('Run Diagnostics', 'runDiagnostic')
+    .addItem('Archive Old Data (30 Days)', 'runManualArchive')
     .addSeparator()
     .addSubMenu(ui.createMenu('Clear')
       .addItem('Clear Updated From', 'clearUpdatedFrom')
@@ -813,6 +814,7 @@ function createReadmeSheet() {
     ['2. Logic Machine Checklist', '1. Danh sách máy mục tiêu: Lấy từ cột A của sheet "Master_data" (18 máy).\n2. Xác định ca/ngày làm việc: Đọc cột "jobId" và trích xuất timestamp gốc của MongoDB, chuyển đổi sang giờ Việt Nam (GMT+7) để xác định chính xác ngày và ca của dòng dữ liệu (bỏ qua lệch múi giờ America/Los_Angeles).\n3. Trạng thái hiển thị: Khớp mẻ mới nhất của từng máy trong ca mục tiêu:\n- Trạng thái hoàn thành (completed) -> "Completed".\n- Trạng thái đang làm (created/in-progress/paused) -> "In Progress".\n- Không có dữ liệu -> "Not Started".', 'Đảm bảo không bỏ sót mẻ trộn nào của ca sáng.'],
     ['3. Logic Changeover Compliance', '1. Phát hiện sự đổi mẻ: Đọc toàn bộ lịch sử trộn của từng máy trong "DATA_MixingTransaction". Sắp xếp theo thời gian tăng dần và đối chiếu cặp giao dịch liên ca.\n2. Cảnh báo Changeover đầu ca/trong ca: Nếu giao dịch sau nằm trong ca mục tiêu và có sự thay đổi ít nhất 1 trong 2 thông số: ProductName hoặc Color (khác rỗng, N/A được xem là 1 màu hợp lệ) -> Kích hoạt yêu cầu làm Changeover.\n3. Khớp nối: Đối chiếu với các phiếu đã làm trong "DATA_Changeover-Mixing" theo 3 cấp độ (Khớp mẻ chi tiết -> Khớp theo sản phẩm -> Khớp màu của cùng sản phẩm cũ) để hiển thị trạng thái tương ứng (Đã thực hiện, Chờ duyệt, Đang thực hiện, hoặc Thiếu).', 'Hỗ trợ so sánh liên ca (Cross-shift) hoàn hảo.'],
     ['4. Logic Error Alerts', '1. Nguồn dữ liệu: Quét sheet "History_Error_Mixing_none_Match_Data".\n2. Bộ lọc: Lấy tất cả các lỗi xảy ra trùng Ngày và Ca mục tiêu.\n3. Phân loại hiển thị: Hiển thị danh sách các lỗi có Trạng thái khắc phục là "Chưa khắc phục" hoặc trống để cảnh báo đỏ lên Dashboard và hệ thống Google Chat.', 'Lỗi đã khắc phục sẽ tự động ẩn khỏi danh sách cảnh báo chủ đạo.'],
+    ['5. Cơ chế Lưu trữ Tự động (Archiving)', 'Hệ thống tự động di chuyển các bản ghi cũ hơn 30 ngày từ 5 sheet chính sang tệp lưu trữ "Mixing_Data_Archive" đặt tại Google Drive Folder ID "1i_FA0pNDasWPt0l9TK3uA7fZBHLPz1DS". Chỉ giữ lại 30 ngày dữ liệu hoạt động trực tuyến để tối ưu hiệu năng.', 'Có thể kích hoạt thủ công qua Menu Augmentir > Archive Old Data (30 Days) hoặc thiết lập Trigger tự động hàng tuần.'],
     ['', '', ''],
     ['Platform: Augmentir', 'Lấy danh sách jobs từ API Augmentir.', 'Ghi vào sheet DATA theo mốc incremental dựa trên updatedAt.'],
     ['Platform: DOMO', 'Đồng bộ giao dịch sản xuất từ DOMO Dataset API.', 'Ghi theo upsert mode bằng cột Id để giữ nguyên lịch sử giao dịch.'],
@@ -840,7 +842,7 @@ function createReadmeSheet() {
     .setBackground('#2e7d32')
     .setFontColor('white')
     .setFontWeight('bold');
-  readmeSheet.getRange(36, 1, 1, 3)
+  readmeSheet.getRange(37, 1, 1, 3)
     .setBackground('#0288d1')
     .setFontColor('white')
     .setFontWeight('bold');

@@ -1100,3 +1100,140 @@ function runDiagnostic() {
   
   SpreadsheetApp.getActiveSpreadsheet().toast("Chẩn đoán hoàn tất! Hãy kiểm tra sheet DEBUG_LOG.", "Diagnostic", 5);
 }
+
+// =========================================================================
+// 11. 30-DAY AUTO-ARCHIVING ENGINE
+// =========================================================================
+
+/**
+ * Hàm kích hoạt thủ công từ custom menu. Hiển thị hộp thoại xác nhận.
+ */
+function runManualArchive() {
+  var ui = SpreadsheetApp.getUi();
+  var response = ui.alert(
+    "Lưu trữ dữ liệu cũ (Archive)",
+    "Hành động này sẽ tự động di chuyển toàn bộ dữ liệu thô cũ hơn 30 ngày từ 5 sheet chính sang tệp tin lưu trữ 'Mixing_Data_Archive' tại thư mục Drive được chỉ định để tối ưu hóa hiệu năng.\n\nBạn có chắc chắn muốn tiếp tục?",
+    ui.ButtonSet.YES_NO
+  );
+  
+  if (response === ui.Button.YES) {
+    SpreadsheetApp.getActiveSpreadsheet().toast("Đang bắt đầu quá trình lưu trữ...", "Auto-Archive", 5);
+    try {
+      triggerAutoArchive();
+      SpreadsheetApp.getActiveSpreadsheet().toast("Lưu trữ dữ liệu thành công!", "Auto-Archive", 8);
+      ui.alert("Thành công", "Đã di chuyển toàn bộ dữ liệu cũ hơn 30 ngày vào tệp 'Mixing_Data_Archive' thành công!", ui.ButtonSet.OK);
+    } catch (e) {
+      Logger.log("Archiving failed: " + e.toString());
+      SpreadsheetApp.getActiveSpreadsheet().toast("Quá trình lưu trữ thất bại!", "Auto-Archive", 8);
+      ui.alert("Lỗi lưu trữ", "Quá trình di chuyển dữ liệu gặp sự cố: " + e.toString(), ui.ButtonSet.OK);
+    }
+  }
+}
+
+/**
+ * Hàm lõi tự động hóa dọn dẹp và di chuyển dữ liệu cũ hơn 30 ngày sang tệp tin lưu trữ phụ.
+ * Có thể gắn vào Trigger thời gian (Time-driven) chạy hàng tuần hoặc hàng ngày.
+ */
+function triggerAutoArchive() {
+  var folderId = "1i_FA0pNDasWPt0l9TK3uA7fZBHLPz1DS";
+  var archiveName = "Mixing_Data_Archive";
+  var retentionDays = 30;
+  
+  var folder = DriveApp.getFolderById(folderId);
+  var files = folder.getFilesByName(archiveName);
+  var archiveSs;
+  
+  if (files.hasNext()) {
+    archiveSs = SpreadsheetApp.open(files.next());
+  } else {
+    // Tạo mới tệp tin Spreadsheet lưu trữ phụ
+    var newFile = SpreadsheetApp.create(archiveName);
+    var file = DriveApp.getFileById(newFile.getId());
+    file.moveTo(folder);
+    archiveSs = SpreadsheetApp.openById(newFile.getId());
+  }
+  
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheetsToArchive = [
+    "DATA", 
+    "DATA_MixingTransaction", 
+    "DATA_Changeover-Mixing", 
+    "History_Error_Mixing_none_Match_Data", 
+    "CR_History_Snapshot"
+  ];
+  
+  sheetsToArchive.forEach(function(sheetName) {
+    var sheet = ss.getSheetByName(sheetName);
+    if (sheet) {
+      _archiveSheet(sheet, archiveSs, retentionDays);
+    }
+  });
+}
+
+/**
+ * Hàm phụ trợ lọc và di chuyển các dòng dữ liệu thô cũ sang Spreadsheet Archive.
+ */
+function _archiveSheet(srcSheet, archiveSs, retentionDays) {
+  var data = srcSheet.getDataRange().getValues();
+  if (data.length <= 1) return; // Chỉ có tiêu đề hoặc trống rỗng
+  
+  var header = data.shift();
+  
+  // Tìm cột ngày phù hợp từ tiêu đề
+  var dateColCandidates = ["createdAt", "CreatedDate", "Ngày", "data.Ngày thực hiện", "timestamp", "DayShift", "shift_date"];
+  var dateColIdx = -1;
+  for (var i = 0; i < dateColCandidates.length; i++) {
+    var idx = header.indexOf(dateColCandidates[i]);
+    if (idx !== -1) {
+      dateColIdx = idx;
+      break;
+    }
+  }
+  
+  // Fallback về cột A (index 0) nếu không tìm thấy cột ngày đặc biệt
+  if (dateColIdx === -1) dateColIdx = 0;
+  
+  var now = new Date();
+  var cutoffTime = now.getTime() - retentionDays * 24 * 3600 * 1000;
+  
+  var keepRows = [header];
+  var archiveRows = [];
+  
+  data.forEach(function(row) {
+    var rawDate = row[dateColIdx];
+    var parsedDate = _parseFlexDate(rawDate);
+    
+    if (parsedDate && !isNaN(parsedDate.getTime())) {
+      if (parsedDate.getTime() < cutoffTime) {
+        archiveRows.push(row);
+      } else {
+        keepRows.push(row);
+      }
+    } else {
+      // Giữ lại các dòng không parse được ngày để tránh mất mát dữ liệu
+      keepRows.push(row);
+    }
+  });
+  
+  if (archiveRows.length > 0) {
+    var arcSheetName = srcSheet.getName();
+    var arcSheet = archiveSs.getSheetByName(arcSheetName);
+    
+    if (!arcSheet) {
+      arcSheet = archiveSs.insertSheet(arcSheetName);
+      arcSheet.appendRow(header); // Append header row
+    }
+    
+    // Nối đuôi dữ liệu vào Archive sheet
+    var startRow = arcSheet.getLastRow() + 1;
+    arcSheet.getRange(startRow, 1, archiveRows.length, header.length).setValues(archiveRows);
+    
+    // Ghi đè lại các dòng dữ liệu mới về sheet hoạt động chính
+    srcSheet.clearContents();
+    srcSheet.getRange(1, 1, keepRows.length, header.length).setValues(keepRows);
+    SpreadsheetApp.flush();
+    
+    Logger.log("Successfully archived " + archiveRows.length + " rows from sheet: " + srcSheet.getName());
+  }
+}
+

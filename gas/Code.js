@@ -73,6 +73,7 @@ function onOpen() {
     .addItem('Create SETUP_NEW', 'setupMultiProcedureTable')
     .addItem('Create README', 'createReadmeSheet')
     .addItem('Run Diagnostics', 'runDiagnostic')
+    .addItem('Run Sync Diagnostics', 'runSyncDiagnostics')
     .addItem('Archive Old Data (30 Days)', 'runManualArchive')
     .addSeparator()
     .addSubMenu(ui.createMenu('Clear')
@@ -246,7 +247,7 @@ function _parseSetupNewRow(configSheet, row, rowNumber) {
   const enabled = row[0];
   const platform = (_cleanConfigText(row[1]) || 'AUGMENTIR').toUpperCase();
   const dataSheetName = _cleanConfigText(row[2]) || DATA_SHEET_NAME;
-  const procedureName = _cleanConfigText(row[3]);
+  let procedureName = _cleanConfigText(row[3]);
   const procedureId = _cleanConfigText(row[4]);
   const dateColumn = _cleanConfigText(row[5]);
   const dateType = (row[6] || 'AUTO').toString().trim().toUpperCase();
@@ -262,7 +263,8 @@ function _parseSetupNewRow(configSheet, row, rowNumber) {
   }
   if (!procedureId && !procedureName) return null;
   if (platform === 'AUGMENTIR' && procedureName && procedureId) {
-    throw new Error(`Dòng ${rowNumber}: Augmentir chỉ nhập một trong hai cột Procedure Name hoặc Procedure ID`);
+    // Nếu nhập cả hai, ưu tiên ID và bỏ qua Name để tránh báo lỗi và lỗi API
+    procedureName = '';
   }
   if (platform === 'DOMO' && !procedureId) {
     throw new Error(`Dòng ${rowNumber}: Domo cần Dataset ID trong cột Procedure ID / Dataset ID`);

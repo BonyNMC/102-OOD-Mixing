@@ -144,3 +144,48 @@ function runDiagnosticErrors() {
 
   saveTextFile(output.join("\n"));
 }
+
+function runSyncDiagnostics() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var output = [];
+  output.push("=== START SYNC DIAGNOSTICS ===");
+  output.push("Current Time: " + Utilities.formatDate(new Date(), "Asia/Ho_Chi_Minh", "yyyy-MM-dd HH:mm:ss"));
+  
+  // Log SETUP_NEW state
+  try {
+    var setupNew = ss.getSheetByName("SETUP_NEW");
+    if (setupNew) {
+      var data = setupNew.getDataRange().getValues();
+      output.push("SETUP_NEW row count: " + data.length);
+      data.forEach(function(row, idx) {
+        if (idx === 0 || idx === 1) return; // skip headers
+        if (row[0] === true || row[0] === "TRUE") {
+          output.push("Procedure Enabled: Platform=" + row[1] + " | Sheet=" + row[2] + " | Source=" + row[3] + " | ID=" + row[4] + " | LastUpdated=" + row[20]);
+        }
+      });
+    } else {
+      output.push("SETUP_NEW sheet not found!");
+    }
+  } catch(e) {
+    output.push("Failed to read SETUP_NEW: " + e.toString());
+  }
+
+  // Attempt to run update()
+  try {
+    output.push("\nRunning update()...");
+    if (typeof update === "function") {
+      update();
+      output.push("update() completed successfully!");
+    } else {
+      output.push("Error: update() function is not defined!");
+    }
+  } catch (e) {
+    output.push("Error during update(): " + e.toString());
+    if (e.stack) {
+      output.push("Stack trace:\n" + e.stack);
+    }
+  }
+
+  output.push("=== END SYNC DIAGNOSTICS ===");
+  saveTextFile(output.join("\n"));
+}
